@@ -1,0 +1,49 @@
+{
+  "menu": [
+    {
+      "src": "img/menu/Lamb.jpg ",
+      "altimg": "Rack of lamb",
+      "title": "Rack of lamb",
+      "descr": "Rack of lamb - class part of the carcass, which makes very appetizing, tasty and very tender dishes. Usually, the loin is served in one piece, which consists of 7-8 ribs.",
+      "price": 20
+    },
+    {
+      "src": "img/menu/chicken.jpeg",
+      "altimg": "Crispy southern fried chicken",
+      "title": "Crispy southern fried chicken",
+      "descr": "Crispy southern fried chicken - Such a chicken, even in its raw form, looks many times neater and tastier. Fantastically crispy, slightly spicy crust, under which tender meat hides",
+      "price": 8
+    },
+    {
+      "src": "img/menu/octopus.jpeg",
+      "altimg": "Fried octopus",
+      "title": "Fried octopus with strawberries'",
+      "descr": "Fried octopus is a delicious appetizer that seafood lovers will especially like. Octopus meat itself is tasteless, however, if you use a marinade, the taste of the snack changes completely.",
+      "price": 18
+    },
+    {
+      "src": "img/menu/antipasta.jpg",
+      "altimg": "Antipasta with prosciutto",
+      "title": "Antipasta with prosciutto",
+      "descr": "Antipasta is a traditional Italian light appetizer before pasta. As a rule, it contains only a few components that are harmonious in taste.",
+      "price": 5
+    },
+    {
+      "src": "img/menu/antipasta.jpg",
+      "altimg": "Antipasta with prosciutto",
+      "title": "Antipasta with prosciutto",
+      "descr": "Antipasta is a traditional Italian light appetizer before pasta. As a rule, it contains only a few components that are harmonious in taste.",
+      "price": 5
+    },
+    {
+      "src": "img/menu/antipasta.jpg",
+      "altimg": "Antipasta with prosciutto",
+      "title": "Antipasta with prosciutto",
+      "descr": "Antipasta is a traditional Italian light appetizer before pasta. As a rule, it contains only a few components that are harmonious in taste.",
+      "price": 5
+    }
+  ],
+  "requests": [
+
+  ]
+}
