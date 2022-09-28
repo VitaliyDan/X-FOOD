@@ -14,8 +14,8 @@
     <header class="header">
         <div class="header__left-block">
             <div class="header__logo">
-                <img src="./icons/Group 5.svg" alt="logotype">
-            </div>
+                <img src="./icons/logo.png" alt="logotype" style="max-width: 330px;">
+            </div>`
             <nav class="header__links">
                 <a href="#MenuTab" class="header__link">Menu</a>
                 <a href="#Calculator" class="header__link">Calculator</a>
@@ -23,7 +23,7 @@
         </div>
         <div class="header__right-block">
 
-            <button id="openFormBtn" class="btn btn_white">Login</button>
+            <button class="userBtn" id="openFormBtn"><img style="max-width: 50px;" src="./icons/user.png" alt="user"></button>
 
             <button data-modal class="btn btn_white">Feedback</button>
             
@@ -90,8 +90,12 @@
             <div class="offer__text">
                 <h2 class="title">What can we offer you?</h2>
                 <div class="offer__descr">
-                    Our main idea is proper nutrition. It can be simple and delicious. We are not just a delivery, we are a service! We took on all the calculations of BZHU, calorie content, portion sizes and other important but boring aspects. All that remains for you is healthy, filling and proper food, which we bring right to your door.
+                    Behind every great human achievement, there is a team.ㅤ ㅤ ㅤ ㅤ ㅤ ㅤ
+                    We are the “X-Food” team. Our mission is to deliver our users the healthy lifestyle just in a few clicks. 
+                    Whenever they are, whoever they are. From the fitness gym to the important business meeting. 
+ 
                 </div>
+                <div style="margin-left: 15px; margin-top: 15px; font-size: 20px; font-weight: 600;"> Enjoy❤️  </div>
             </div>
             <div class="offer__action">
                 <button data-modal class="btn btn_dark">Feedback</button>
@@ -271,10 +275,10 @@
 
     <div class="modal">
         <div class="modal__dialog">
-            <div class="modal__content" style= "background-image: url(./img/tabs/background.jpeg); background-size: cover;">
+            <div class="modal__content" style= "background-image: url(./img/modal/backgroundFB.jpg); background-size: cover;">
                 <form action="#">
                     <div data-close class="modal__close">&times;</div>
-                    <div class="modal__title" style="font-size: 35px; color: rgb(254, 254, 254);font-weight: 500;">We callback you soon!</div>
+                    <div class="modal__title">We callback you soon!</div>
                     <input required placeholder="Your name" name="name" type="text" class="modal__input">
                     <input required placeholder="Your phone" name="phone" type="phone" class="modal__input">
                     <button class="btn btn_dark btn_min">Call me!</button>
@@ -284,16 +288,16 @@
     </div>
 
     <div class="registrModal">
-        <div class="modal__dialog">
-            <div class="modal__content" style= "background: #f1f1f1">
+        <div class="modal__reg">
+            <div class="modal__content" style= "background-image: url(./img/modal/backgroundRW.jpg); background-size: cover; text-align: center;">
                 <div class="registr-btns">
                     <button id="logIn" class="regbtn">Login</button>
                     <button id="regestrIn" class="regbtn">Register</button>
                 </div>
                 <div class="login-form">
-                    <form action="#">
-                        <div data-close class="modal__close">&times;</div>
-                        <div class="modal__title">Sign in</div>
+                    <form  action="#">
+                        <div data-close class="modal__close" style="color: red;">&times;</div>
+                        <div class="maodal_reg">Sign in</div>
                         <input required placeholder="Your username" name="user" type="text" class="modal__input">
                         <div class="pass-container">
                             <input required placeholder="Your password" name="pass" type="password" class="modal__input" id="pass">
@@ -304,19 +308,18 @@
                 </div>
                 <div class="reg-form hide">
                     <form action="#">
-                        <div data-close class="modal__close">&times;</div>
-                        <div class="modal__title">Registration</div>
-                        <input required placeholder="Your name" name="name" type="text" class="modal__input">
-                        <input required placeholder="Your surname" name="surname" type="text" class="modal__input">
-                        <input required placeholder="Your email" name="surname" type="email" class="modal__input">
-                        <input required placeholder="Create username" name="user" type="text" class="modal__input">
-                        <div class="pass-container">
-                            <input required placeholder="Create password" name="pass" type="password" class="modal__input" id="pass">
-                            <i class="far fa-eye" id="togglePassword"></i>
-                        </div>
-                        <div class="pass-container">
+                        <div data-close class="modal__close" style="color: red;">&times;</div>
+                        <div class="maodal_reg">Registration</div>
+                        <div class="displayLog"> 
+                            <input required placeholder="Your username" name="username" type="text" class="modal__input">
+                            <input required placeholder="Your email" name="surname" type="email" class="modal__input">
+                            <div class="pass-container">
+                                <input required placeholder="Create password" name="pass" type="password" class="modal__input" id="pass">
+                                <i class="far fa-eye" id="togglePassword"></i>
+                            </div>
                             <input required placeholder="Repeat password" name="pass" type="password" class="modal__input">
                         </div>
+
                         <div class="log-reg-btn"><button id="regBtn" class="btn btn_dark btn_min">Register</button></div>
                     </form>
                 </div>
