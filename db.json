@@ -22,35 +22,35 @@
       "price": 45
     },
     {
-      "src": "img/menu/Premier Protein Shake.png",
+      "src": "img/menu/PremierProteinShake.png",
       "altimg": "Premier Protein Shake",
       "title": "Premier Protein Shake",
       "descr": "Like the taste of a caramel sundae with dripping caramel over vanilla ice cream in this protein shake; Winner of American Masters of Taste Gold Medal for SUPERIOR TASTING ready-to-drink protein beverages.",
       "price": 32
     },
     {
-      "src": "img/menu/Quest Tortilla Style Protein Chips Variety Pack.png",
+      "src": "img/menu/QuestTortilla.png",
       "altimg": "Quest Tortilla Style Protein Chips Variety Pack",
       "title": "Quest Tortilla Style Protein Chips Variety Pack",
       "descr": "CRUNCH INTO COMPLETE PROTEINS: Quest Tortilla Style Protein Chips are made with complete, dairy-based proteins to provide your body with 9 essential amino acids",
       "price": 49
     },
     {
-      "src": "img/menu/GO ON Protein Granola.png",
+      "src": "img/menu/GOONProteinGranola.png",
       "altimg": "GO ON Protein Granola",
       "title": "GO ON Protein Granola",
       "descr": "GO ON PROTEIN GRANOLA 300 grams is a delicious breakfast enriched with vegetable protein, which is also suitable as a quick snack at any time of the day, especially suitable for athletes or people watching their weight.",
       "price": 3
     },
     {
-      "src": "img/menu/Vega Real Food Smoothie.png",
+      "src": "img/menu/VegaRealFoodSmoothie.png",
       "altimg": "Vega Real Food Smoothie",
       "title": "Vega Real Food Smoothie",
       "descr": "20g of North American-sourced pea protein made with real food ingredients like oats and spinach. Silky smooth, sippable smoothie – no blender needed. Non-GMO Project Verified, Vegan certified, and gluten-free",
       "price": 43
     },
     {
-      "src": "img/menu/Pure Protein Bars.png",
+      "src": "img/menu/PureProteinBars.png",
       "altimg": "Pure Protein Bars",
       "title": "Pure Protein Bars",
       "descr": "Variety pack includes: 10 - Chocolate Peanut Butter, 8 - Chocolate Deluxe, 7 - Chewy Chocolate Chip.",
@@ -58,7 +58,7 @@
     }
     ,
     {
-      "src": "img/menu/Kellogg's Special K Protein Bars.png",
+      "src": "img/menu/KelloggsSpecialKProteinBars.png",
       "altimg": "Kellogg's Special K Protein Bars",
       "title": "Kellogg's Special K Protein Bars",
       "descr": "Deliciously portable protein meal bar made to fuel and fill you up without slowing you down. Satisfies taste buds with a rich, creamy coating outside and fruity bursts of strawberry flavor inside.",
