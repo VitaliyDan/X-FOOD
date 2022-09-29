@@ -1,23 +1,26 @@
+/* import { openModal, closeModal } from "./modal" */
+
 const modal = document.querySelector('.registrModal')
 const openBtn = document.querySelector('#openFormBtn')
 const registrBtn = document.querySelector('#regestrIn') 
 const logBtn = document.querySelector('#logIn') 
 const loginForm = document.querySelector('.login-form') 
 const regForm = document.querySelector('.reg-form') 
-const togglePasswords = document.querySelectorAll('#togglePassword')
 const passwords = document.querySelectorAll('#pass')
+const togglePasswords = document.querySelectorAll('#togglePassword')
 
-for (const togglePassword of togglePasswords){
-    togglePassword.addEventListener('click', function (e) {
-        for(const password of passwords){
-            const type = password.getAttribute('type') === 'password' ? 'text' : 'password'
-            password.setAttribute('type', type)
+for(let i = 0; i<passwords.length; i++) {
+    togglePasswords[i].addEventListener('click', () => {
+        if(togglePasswords[i].classList.contains('fa-eye-slash')) {
+            togglePasswords[i].classList.remove('fa-eye-slash')
+        } else {
+            togglePasswords[i].classList.add('fa-eye-slash')
         }
-        this.classList.toggle('fa-eye-slash')
+        ChangePasswordType(passwords[i])
     })
 }
 openBtn.addEventListener('click', () => {
-    openModal()
+    openModal(modal)
 })
 modal.addEventListener('click', (e) => {
     if (e.target === modal || e.target.getAttribute('data-close') == "") {
@@ -41,4 +44,8 @@ function closeModal() {
     modal.classList.add('hide')
     modal.classList.remove('show')
     document.body.style.overflow = ''
+}
+function ChangePasswordType (element) {
+    const type = element.getAttribute('type') === 'password' ? 'text' : 'password'
+    element.setAttribute('type', type)
 }
