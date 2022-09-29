@@ -1,46 +1,68 @@
 {
   "menu": [
     {
-      "src": "img/menu/Lamb.jpg ",
-      "altimg": "Rack of lamb",
-      "title": "Rack of lamb",
-      "descr": "Rack of lamb - class part of the carcass, which makes very appetizing, tasty and very tender dishes. Usually, the loin is served in one piece, which consists of 7-8 ribs.",
-      "price": 20
+      "src": "img/menu/snackbar.jpg",
+      "altimg": "Cereal Marshmallow Galaxy",
+      "title": "Cereal Marshmallow Galaxy",
+      "descr": "365 by Whole Foods Market products give you that dance-down-the-aisles feeling, virtual aisles too! Our huge range of choices with premium ingredients at prices you can get down with makes grocery shopping so much more than tossing the basics in your cart.",
+      "price": 14
     },
     {
-      "src": "img/menu/chicken.jpeg",
-      "altimg": "Crispy southern fried chicken",
-      "title": "Crispy southern fried chicken",
-      "descr": "Crispy southern fried chicken - Such a chicken, even in its raw form, looks many times neater and tastier. Fantastically crispy, slightly spicy crust, under which tender meat hides",
-      "price": 8
+      "src": "img/menu/36.jpg",
+      "altimg": "Vega Sport Premium Protein Powder",
+      "title": "Vega Sport Premium Protein Powder",
+      "descr": "Made for athletes - NSF Certified for Sport, Non-GMO Project Verified, Certified Vegan protein powder and gluten free. Smooth taste and texture, just blend or shake with water or your choice of beverage post workout.",
+      "price": 34
     },
     {
-      "src": "img/menu/octopus.jpeg",
-      "altimg": "Fried octopus",
-      "title": "Fried octopus with strawberries'",
-      "descr": "Fried octopus is a delicious appetizer that seafood lovers will especially like. Octopus meat itself is tasteless, however, if you use a marinade, the taste of the snack changes completely.",
-      "price": 18
+      "src": "img/menu/OptimumNutritionGold.png",
+      "altimg": "Optimum Nutrition Gold Standard 100% Whey Protein Powder",
+      "title": "Optimum Nutrition Gold Standard 100% Whey Protein Powder with strawberries'",
+      "descr": "Over 5 grams of BCAAS help build lean and strong muscles with BCAAs. 3-4 grams carbs, 1-3 grams sugar, and 1-1.5 grams fat, gluten free, no sucralose in Double Rich Chocolate flavor. Notice: Do not use as a sole source of nutrition.",
+      "price": 45
     },
     {
-      "src": "img/menu/antipasta.jpg",
-      "altimg": "Antipasta with prosciutto",
-      "title": "Antipasta with prosciutto",
-      "descr": "Antipasta is a traditional Italian light appetizer before pasta. As a rule, it contains only a few components that are harmonious in taste.",
-      "price": 5
+      "src": "img/menu/Premier Protein Shake.png",
+      "altimg": "Premier Protein Shake",
+      "title": "Premier Protein Shake",
+      "descr": "Like the taste of a caramel sundae with dripping caramel over vanilla ice cream in this protein shake; Winner of American Masters of Taste Gold Medal for SUPERIOR TASTING ready-to-drink protein beverages.",
+      "price": 32
     },
     {
-      "src": "img/menu/antipasta.jpg",
-      "altimg": "Antipasta with prosciutto",
-      "title": "Antipasta with prosciutto",
-      "descr": "Antipasta is a traditional Italian light appetizer before pasta. As a rule, it contains only a few components that are harmonious in taste.",
-      "price": 5
+      "src": "img/menu/Quest Tortilla Style Protein Chips Variety Pack.png",
+      "altimg": "Quest Tortilla Style Protein Chips Variety Pack",
+      "title": "Quest Tortilla Style Protein Chips Variety Pack",
+      "descr": "CRUNCH INTO COMPLETE PROTEINS: Quest Tortilla Style Protein Chips are made with complete, dairy-based proteins to provide your body with 9 essential amino acids",
+      "price": 49
     },
     {
-      "src": "img/menu/antipasta.jpg",
-      "altimg": "Antipasta with prosciutto",
-      "title": "Antipasta with prosciutto",
-      "descr": "Antipasta is a traditional Italian light appetizer before pasta. As a rule, it contains only a few components that are harmonious in taste.",
-      "price": 5
+      "src": "img/menu/GO ON Protein Granola.png",
+      "altimg": "GO ON Protein Granola",
+      "title": "GO ON Protein Granola",
+      "descr": "GO ON PROTEIN GRANOLA 300 grams is a delicious breakfast enriched with vegetable protein, which is also suitable as a quick snack at any time of the day, especially suitable for athletes or people watching their weight.",
+      "price": 3
+    },
+    {
+      "src": "img/menu/Vega Real Food Smoothie.png",
+      "altimg": "Vega Real Food Smoothie",
+      "title": "Vega Real Food Smoothie",
+      "descr": "20g of North American-sourced pea protein made with real food ingredients like oats and spinach. Silky smooth, sippable smoothie – no blender needed. Non-GMO Project Verified, Vegan certified, and gluten-free",
+      "price": 43
+    },
+    {
+      "src": "img/menu/Pure Protein Bars.png",
+      "altimg": "Pure Protein Bars",
+      "title": "Pure Protein Bars",
+      "descr": "Variety pack includes: 10 - Chocolate Peanut Butter, 8 - Chocolate Deluxe, 7 - Chewy Chocolate Chip.",
+      "price": 35
+    }
+    ,
+    {
+      "src": "img/menu/Kellogg's Special K Protein Bars.png",
+      "altimg": "Kellogg's Special K Protein Bars",
+      "title": "Kellogg's Special K Protein Bars",
+      "descr": "Deliciously portable protein meal bar made to fuel and fill you up without slowing you down. Satisfies taste buds with a rich, creamy coating outside and fruity bursts of strawberry flavor inside.",
+      "price": 43
     }
   ],
   "requests": [
