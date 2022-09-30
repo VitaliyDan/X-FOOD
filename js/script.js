@@ -1,6 +1,6 @@
 'use strict';
 import cards from './modules/cards';
-import regModal from './modules/registrModal';
+import regModal from './modules/regModal';
 import calc from './modules/clac';
 import forms from './modules/forms';
 import modal from './modules/modal';

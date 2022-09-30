@@ -1,5 +1,5 @@
 /* import { openModal, closeModal } from "./modal" */
-function regModal() {
+function regModal(){
     const modal = document.querySelector('.registrModal')
     const openBtn = document.querySelector('#openFormBtn')
     const registrBtn = document.querySelector('#regestrIn')
@@ -53,4 +53,4 @@ function regModal() {
         element.setAttribute('type', type)
     }
 }
-    export default regModal;
+export default regModal;
