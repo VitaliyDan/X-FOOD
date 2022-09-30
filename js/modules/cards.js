@@ -20,9 +20,7 @@ function cards(){
 
             element.innerHTML = `
                 <div class="menu__item">
-                    <div>
-                        <img src=${this.src} alt=${this.altimg} style="height:300px; object-fit: cover;">
-                    </div>
+                    <img src=${this.src} alt=${this.altimg} style="height:300px; object-fit: cover;">
                     <h3 class="menu__item-subtitle">${this.title}</h3>
                     <div class="menu__item-descr">${this.descr}</div>
                     <div class="menu__item-divider"></div>
