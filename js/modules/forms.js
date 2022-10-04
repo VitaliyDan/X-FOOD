@@ -72,7 +72,7 @@ function forms(modalTimerId){
             prevModal.classList.add('show');
             prevModal.classList.remove('hide');
             closeModal('.modal');
-        }, 2000);
+        }, 8000);
     }
 }
 export default forms;

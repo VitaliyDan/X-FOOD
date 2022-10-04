@@ -25,7 +25,7 @@
 
             <button class="userBtn" id="openFormBtn"><img style="max-width: 50px;" src="./icons/user.png" alt="user"></button>
 
-            <button data-modal class="btn btn_white">Feedback</button>
+            <button data-modal class="btn btn_white">Order</button>
             
         </div>
     </header>
@@ -45,37 +45,38 @@
         <div class="container">
             <div class="tabcontainer">
                 <div class="tabcontent">
-                    <img src="./img/widget/proteinBar.jpeg" alt="ProteinBar">
+                    <img src="img/widget/proteinBar.jpeg" alt="FitnesBar">
+                    <div class="tabcontent__descr">
+                        A fitness bar is a food that is designed to increase physical energy. Usually, fitness bars contain a combination of proteins - fats - carbohydrates, in addition, they are enriched with vitamins and minerals.
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/widget/Vitamin.png" alt="Vitamins">
+                    <div class="tabcontent__descr">
+                        The role of vitamins and minerals is not only to help achieve higher results. They are also important for your body to be able to withstand heavy loads.
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/widget/gejner_main.jpeg" alt="Gainers">
+                    <div class="tabcontent__descr">
+                        Gainer is a specialized sports food mixture containing a certain ratio of protein and carbohydrates.
+                        Depending on the purpose and type of training, gainers are used as a complete sports nutrition or as a supplement.    
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/widget/protein.jpeg" alt="Proteins">
                     <div class="tabcontent__descr">
                         Proteins are a key nutritional supplement for every active athlete.
                         Proteins help in building muscle mass and at the same time provide protection and regeneration of muscle tissue that wears out during training.                  
                     </div>
                 </div>
-                <div class="tabcontent">
-                    <img src="img/tabs/elite.jpg" alt="elite">
-                    <div class="tabcontent__descr">
-                        Menu "Premium" - we use not only beautiful packaging design, but also high-quality execution of dishes. Red fish, seafood, fruits - a restaurant menu without going to a restaurant!
-                    </div>
-                </div>
-                <div class="tabcontent">
-                    <img src="img/tabs/postne.jpeg" alt="post">
-                    <div class="tabcontent__descr">
-                        Our special "Lenten Menu" is a careful selection of ingredients: the complete absence of animal products. Complete harmony with yourself and nature in every element! Everything will be Ok!
-                    </div>
-                </div>
-                <div class="tabcontent">
-                    <img src="img/tabs/balance.jpeg" alt="vegy">
-                    <div class="tabcontent__descr">
-                        The "Balanced" menu is the compliance of your diet with all scientific recommendations. We carefully calculate your need for c/w/w/y and create the best dishes for you.
-                    </div>
-                </div>
                 <div class="tabheader">
-                    <h3>Choose a style-food </h3>
+                    <h3>Choose a additional nutrition</h3>
                     <div class="tabheader__items">
-                        <div class="tabheader__item tabheader__item_active">Fitness</div>
-                        <div class="tabheader__item">Premium</div>
-                        <div class="tabheader__item">Lenten</div>
-                        <div class="tabheader__item">Balance</div>
+                        <div class="tabheader__item tabheader__item_active">Fitnes Bar</div>
+                        <div class="tabheader__item">Vitamins</div>
+                        <div class="tabheader__item">Gainers</div>
+                        <div class="tabheader__item">Proteins</div>
                     </div>
                 </div>
             </div>
@@ -99,7 +100,7 @@
                 <div style="margin-left: 15px; margin-top: 15px; font-size: 20px; font-weight: 600;"> Enjoy❤️  </div>
             </div>
             <div class="offer__action">
-                <button data-modal class="btn btn_dark">Feedback</button>
+                <button data-modal class="btn btn_dark">Order</button>
             </div>
         </div>
         <div class="container">
@@ -128,16 +129,19 @@
                     <div class="offer__slider-wrapper">
                     <div class="slider-inner">
                         <div class="offer__slide">
-                            <img src="img/slider/pepper.jpg" alt="pepper">
+                            <img src="img/slider/flakes.png" alt="Flakes">
                         </div>
                         <div class="offer__slide">
-                            <img src="img/slider/food-12.jpg" alt="food">
+                            <img src="img/slider/Bar.png" alt="Bar">
                         </div>
                         <div class="offer__slide">
-                            <img src="img/slider/olive-oil.jpg" alt="oil">
+                            <img src="img/slider/itamins.jpeg" alt="vitamins">
                         </div>
                         <div class="offer__slide">
-                            <img src="img/slider/paprika.jpg" alt="paprika">
+                            <img src="img/slider/creatin.jpeg" alt="creatine">
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/Protein.jpeg" alt="protein">
                         </div>
                     </div>
                 </div>
@@ -233,7 +237,7 @@
                 </div>
             </div>
             <div class="promotion__timer">
-                <div class="title">End of promotion:</div>
+                <div class="title title_background" style="margin-left: 150px;text-align: center;">End of promotion:</div>
                 <div class="timer">
                     <div class="timer__block">
                         <span id="days">12</span>
@@ -276,11 +280,11 @@
 
     <div class="modal">
         <div class="modal__dialog">
-            <div class="modal__content" style= "background-image: url(./img/modal/backgroundFB.jpg); background-size: cover;">
+            <div class="modal__content">
                 <form action="#">
                     <div data-close class="modal__close">&times;</div>
                     <div class="modal__title">We callback you soon!</div>
-                    <input required placeholder="Your name" name="name" type="text" class="modal__input">
+                    <input required placeholder="Name Ware" name="nameWare" type="text" class="modal__input">
                     <input required placeholder="Your phone" name="phone" type="phone" class="modal__input">
                     <button class="btn btn_dark btn_min">Call me!</button>
                 </form>
@@ -290,14 +294,14 @@
 
     <div class="registrModal">
         <div class="modal__reg">
-            <div class="modal__content" style= "background-image: url(./img/modal/backgroundRW.jpg); background-size: cover; text-align: center;">
+            <div class="modal__content">
                 <div class="registr-btns">
                     <button id="logIn" class="regbtn">Login</button>
                     <button id="regestrIn" class="regbtn">Register</button>
                 </div>
                 <div class="login-form">
                     <form  action="#">
-                        <div data-close class="modal__close" style="color: red;">&times;</div>
+                        <div data-close class="modal__close">&times;</div>
                         <div class="maodal_reg">Sign in</div>
                         <input required placeholder="Your username" name="user" type="text" class="modal__input">
                         <div class="pass-container">
@@ -309,7 +313,7 @@
                 </div>
                 <div class="reg-form hide">
                     <form action="#">
-                        <div data-close class="modal__close" style="color: red;">&times;</div>
+                        <div data-close class="modal__close">&times;</div>
                         <div class="maodal_reg">Registration</div>
                         <div class="displayLog"> 
                             <input required placeholder="Your username" name="username" type="text" class="modal__input">

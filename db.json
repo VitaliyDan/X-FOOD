@@ -8,7 +8,7 @@
       "price": 14
     },
     {
-      "src": "img/menu/36.jpg",
+      "src": "img/menu/vega-sport.jpg",
       "altimg": "Vega Sport Premium Protein Powder",
       "title": "Vega Sport Premium Protein Powder",
       "descr": "Made for athletes - NSF Certified for Sport, Non-GMO Project Verified, Certified Vegan protein powder and gluten free. Smooth taste and texture, just blend or shake with water or your choice of beverage post workout.",
@@ -55,8 +55,7 @@
       "title": "Pure Protein Bars",
       "descr": "Variety pack includes: 10 - Chocolate Peanut Butter, 8 - Chocolate Deluxe, 7 - Chewy Chocolate Chip.",
       "price": 35
-    }
-    ,
+    },
     {
       "src": "img/menu/KelloggsSpecialKProteinBars.png",
       "altimg": "Kellogg's Special K Protein Bars",
@@ -66,6 +65,15 @@
     }
   ],
   "requests": [
-
+    {
+      "nameWare": "dsfg",
+      "phone": "dsf",
+      "id": 1
+    },
+    {
+      "nameWare": "Vitamins",
+      "phone": "+380508700185",
+      "id": 2
+    }
   ]
 }

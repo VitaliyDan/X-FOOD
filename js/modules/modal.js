@@ -37,13 +37,13 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-function showModalByScroll() {
-    if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
-        openModal(modalSelector, modalTimerId);
-        window.removeEventListener('scroll', showModalByScroll);
-    }
-}
-window.addEventListener('scroll', showModalByScroll);
+// function showModalByScroll() {
+//     if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+//         openModal(modalSelector, modalTimerId);
+//         window.removeEventListener('scroll', showModalByScroll);
+//     }
+// }
+// window.addEventListener('scroll', showModalByScroll);
 }
 export default modal;
 export {closeModal};
