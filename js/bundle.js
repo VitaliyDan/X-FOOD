@@ -39,9 +39,8 @@ function cards(){
                     <div class="menu__item-descr">${this.descr}</div>
                     <div class="menu__item-divider"></div>
                     <div class="menu__item-price">
-                        <div class="menu__item-cost">Price:</div>
-                        <div class="menu__item-total"><span>${this.price}</span> UAH/day</div>
-                    </div>
+                    <div class="menu__item-cost">Price:</div>
+                    <div class="menu__item-total"><span>${this.price}</span> UAH/day</div>                       
                 </div>
             `;
             this.parent.append(element);
@@ -345,6 +344,75 @@ window.addEventListener('scroll', showModalByScroll);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);
 
 
+
+/***/ }),
+
+/***/ "./js/modules/regModal.js":
+/*!********************************!*\
+  !*** ./js/modules/regModal.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* import { openModal, closeModal } from "./modal" */
+function regModal(){
+    const modal = document.querySelector('.registrModal')
+    const openBtn = document.querySelector('#openFormBtn')
+    const registrBtn = document.querySelector('#regestrIn')
+    const logBtn = document.querySelector('#logIn')
+    const loginForm = document.querySelector('.login-form')
+    const regForm = document.querySelector('.reg-form')
+    const passwords = document.querySelectorAll('#pass')
+    const togglePasswords = document.querySelectorAll('#togglePassword')
+
+    for (let i = 0; i < passwords.length; i++) {
+        togglePasswords[i].addEventListener('click', () => {
+            if (togglePasswords[i].classList.contains('fa-eye-slash')) {
+                togglePasswords[i].classList.remove('fa-eye-slash')
+            } else {
+                togglePasswords[i].classList.add('fa-eye-slash')
+            }
+            ChangePasswordType(passwords[i])
+        })
+    }
+    openBtn.addEventListener('click', () => {
+        openModal(modal)
+    })
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target.getAttribute('data-close') == "") {
+            closeModal(modal)
+        }
+    })
+    logBtn.addEventListener('click', () => {
+        regForm.classList.add('hide')
+        loginForm.classList.remove('hide')
+    })
+    registrBtn.addEventListener('click', () => {
+        loginForm.classList.add('hide')
+        regForm.classList.remove('hide')
+    })
+
+    function openModal() {
+        modal.classList.add('show')
+        modal.classList.remove('hide')
+        document.body.style.overflow = 'hidden'
+    }
+
+    function closeModal() {
+        modal.classList.add('hide')
+        modal.classList.remove('show')
+        document.body.style.overflow = ''
+    }
+
+    function ChangePasswordType(element) {
+        const type = element.getAttribute('type') === 'password' ? 'text' : 'password'
+        element.setAttribute('type', type)
+    }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (regModal);
 
 /***/ }),
 
@@ -655,12 +723,14 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_cards__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/cards */ "./js/modules/cards.js");
-/* harmony import */ var _modules_clac__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/clac */ "./js/modules/clac.js");
-/* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/forms */ "./js/modules/forms.js");
-/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/modal */ "./js/modules/modal.js");
-/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
-/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/tabs */ "./js/modules/tabs.js");
-/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/timer */ "./js/modules/timer.js");
+/* harmony import */ var _modules_regModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/regModal */ "./js/modules/regModal.js");
+/* harmony import */ var _modules_clac__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/clac */ "./js/modules/clac.js");
+/* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/forms */ "./js/modules/forms.js");
+/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/modal */ "./js/modules/modal.js");
+/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
+/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/tabs */ "./js/modules/tabs.js");
+/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/timer */ "./js/modules/timer.js");
+
 
 
 
@@ -672,15 +742,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener('DOMContentLoaded', function () {
-    const modalTimerId = setTimeout(()=> (0,_modules_modal__WEBPACK_IMPORTED_MODULE_3__.openModal)('.modal', modalTimerId), 10000);
+    const modalTimerId = setTimeout(()=> (0,_modules_modal__WEBPACK_IMPORTED_MODULE_4__.openModal)('.modal', modalTimerId), 10000);
     (0,_modules_cards__WEBPACK_IMPORTED_MODULE_0__["default"])();
-    // registrModal();
-    (0,_modules_clac__WEBPACK_IMPORTED_MODULE_1__["default"])();
-    (0,_modules_forms__WEBPACK_IMPORTED_MODULE_2__["default"])(modalTimerId);
-    (0,_modules_modal__WEBPACK_IMPORTED_MODULE_3__["default"])('[data-modal]', '.modal', modalTimerId);
-    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_4__["default"])();
-    (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_5__["default"])();
-    (0,_modules_timer__WEBPACK_IMPORTED_MODULE_6__["default"])();
+    (0,_modules_regModal__WEBPACK_IMPORTED_MODULE_1__["default"])();
+    (0,_modules_clac__WEBPACK_IMPORTED_MODULE_2__["default"])();
+    (0,_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])(modalTimerId);
+    (0,_modules_modal__WEBPACK_IMPORTED_MODULE_4__["default"])('[data-modal]', '.modal', modalTimerId);
+    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_5__["default"])();
+    (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_6__["default"])();
+    (0,_modules_timer__WEBPACK_IMPORTED_MODULE_7__["default"])();
 })
 })();
 
