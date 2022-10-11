@@ -1,13 +1,17 @@
 /* import { openModal, closeModal } from "./modal" */
 function regModal(){
-    const modal = document.querySelector('.registrModal')
-    const openBtn = document.querySelector('#openFormBtn')
-    const registrBtn = document.querySelector('#regestrIn')
-    const logBtn = document.querySelector('#logIn')
-    const loginForm = document.querySelector('.login-form')
-    const regForm = document.querySelector('.reg-form')
-    const passwords = document.querySelectorAll('#pass')
-    const togglePasswords = document.querySelectorAll('#togglePassword')
+    const modal = document.querySelector('.registrModal'),
+     openBtn = document.querySelector('#openFormBtn'),
+     registrBtn = document.querySelector('#regestrIn'),
+     logBtn = document.querySelector('#logIn'),
+     loginForm = document.querySelector('.login-form'),
+     regForm = document.querySelector('.reg-form'),
+     passwords = document.querySelectorAll('#pass'),
+     togglePasswords = document.querySelectorAll('#togglePassword'),
+     userName = document.querySelectorAll('.userReg'),
+     userEmail = document.querySelectorAll('.emailReg').
+     passwdInput = document.querySelectorAll('.paswdReg'),
+     passwddRepeat = document.querySelectorAll('.passwdRep');
 
     for (let i = 0; i < passwords.length; i++) {
         togglePasswords[i].addEventListener('click', () => {

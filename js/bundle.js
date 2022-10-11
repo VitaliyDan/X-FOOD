@@ -34,13 +34,14 @@ function cards(){
 
             element.innerHTML = `
                 <div class="menu__item">
-                    <img src=${this.src} alt=${this.altimg} style="height:300px; object-fit: cover;">
+                    <img src=${this.src} alt=${this.altimg}>
                     <h3 class="menu__item-subtitle">${this.title}</h3>
                     <div class="menu__item-descr">${this.descr}</div>
                     <div class="menu__item-divider"></div>
                     <div class="menu__item-price">
-                    <div class="menu__item-cost">Price:</div>
-                    <div class="menu__item-total"><span>${this.price}</span> UAH/day</div>                       
+                        <div class="menu__item-cost">Price:</div>
+                        <div class="menu__item-total"><span>${this.price}</span> UAH/day</div>
+                    </div>
                 </div>
             `;
             this.parent.append(element);
@@ -54,7 +55,6 @@ function cards(){
         }
         return await res.json();
     };
-
     axios.get('http://localhost:3000/menu')
         .then(data => {
             data.data.forEach(({
@@ -359,14 +359,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* import { openModal, closeModal } from "./modal" */
 function regModal(){
-    const modal = document.querySelector('.registrModal')
-    const openBtn = document.querySelector('#openFormBtn')
-    const registrBtn = document.querySelector('#regestrIn')
-    const logBtn = document.querySelector('#logIn')
-    const loginForm = document.querySelector('.login-form')
-    const regForm = document.querySelector('.reg-form')
-    const passwords = document.querySelectorAll('#pass')
-    const togglePasswords = document.querySelectorAll('#togglePassword')
+    const modal = document.querySelector('.registrModal'),
+     openBtn = document.querySelector('#openFormBtn'),
+     registrBtn = document.querySelector('#regestrIn'),
+     logBtn = document.querySelector('#logIn'),
+     loginForm = document.querySelector('.login-form'),
+     regForm = document.querySelector('.reg-form'),
+     passwords = document.querySelectorAll('#pass'),
+     togglePasswords = document.querySelectorAll('#togglePassword'),
+     userName = document.querySelectorAll('.userReg'),
+     userEmail = document.querySelectorAll('.emailReg').
+     passwdInput = document.querySelectorAll('.paswdReg'),
+     passwddRepeat = document.querySelectorAll('.passwdRep');
 
     for (let i = 0; i < passwords.length; i++) {
         togglePasswords[i].addEventListener('click', () => {
@@ -533,7 +537,7 @@ function autoSlider(){
     }, 4000);
 }  autoSlider();
 }
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);
 
 /***/ }),
 
