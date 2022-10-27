@@ -1,5 +1,5 @@
 function timer (){
-    const deadline = '2022-10-16'; //set your day
+    const deadline = '2022-12-24'; //set your day
 
     function getTimeRemaining(endtime) {
         const t = Date.parse(endtime) - Date.parse(new Date()),
@@ -38,7 +38,6 @@ function timer (){
 
         function updateClock() {
             const t = getTimeRemaining(endtime);
-
             days.innerHTML = getZero(t.days);
             hours.innerHTML = getZero(t.hours);
             minutes.innerHTML = getZero(t.minutes);
@@ -46,10 +45,10 @@ function timer (){
 
             if (t.total <= 0) {
                 clearInterval(timeInterval);
-            }
+            }e
+
         }
     }
-
     setClock('.timer', deadline);
 }
 export default timer;

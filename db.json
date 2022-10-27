@@ -65,15 +65,6 @@
     }
   ],
   "requests": [
-    {
-      "nameWare": "dsfg",
-      "phone": "dsf",
-      "id": 1
-    },
-    {
-      "nameWare": "Vitamins",
-      "phone": "+380508700185",
-      "id": 2
-    }
+    
   ]
 }

@@ -254,10 +254,10 @@ ol {
 
 .tabcontent__descr {
 	position: absolute;
-	top: 300px;
+	top: 320px;
 	right: -177px;
-	width: 550px;
-	height: 359px;
+	width: 500px;
+	height: 300px;
 	background: rgba(251, 254, 93, .8);
 	padding: 50px;
 	font-size: 24px;
