@@ -652,7 +652,7 @@ function timer (){
 
             if (t.total <= 0) {
                 clearInterval(timeInterval);
-            }e
+            }
 
         }
     }
