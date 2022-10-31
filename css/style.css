@@ -116,7 +116,7 @@ ol {
 .header__right-block {
 	display: flex;
 	justify-content: space-between;
-	min-width: 300px;
+	min-width: 350px;
 }
 
 .header__left-block {
@@ -126,7 +126,7 @@ ol {
 	min-width: 500px;
 }
 
-.userBtn {
+.userBtn , .shopBtn {
 	background-color: rgb(95, 82, 66, 0);
 	border-color: rgb(95, 82, 66, 0);
 }
@@ -543,12 +543,13 @@ ol {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-
+	border-radius: 15px;
 	margin-bottom: 100px;
 	width: 320px;
 	height: 620px;
-	background: #fff;
-	box-shadow: 0 4px 25px rgba(0, 0, 0, .25);
+	background: rgb(8,60,4);
+	background: rgb(242,242,11);
+	background: linear-gradient(180deg, rgba(251, 254, 93, .8) 15%, rgba(183,247,24,1) 44%, rgba(125,251,36,1) 100%);
 	font-size: 16px;
 	font-weight: 300
 }

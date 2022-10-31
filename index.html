@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./icons/favocin3d.png"/>
+    <link rel="icon" href="./icons/favicon.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X-Food</title>
     <link rel="stylesheet" href="css/style.css"> 
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header__left-block">
             <div class="header__logo">
                 <img src="./icons/logo.png" alt="logotype" style="max-width: 330px;">
@@ -23,11 +23,9 @@
             </nav>
         </div>
         <div class="header__right-block">
-
+            <button class="shopBtn" id="openShop"><img style="max-width: 45px; display: none;" src="./icons/cartshop.png" alt="shop"></button>
             <button class="userBtn" id="openFormBtn"><img style="max-width: 50px;" src="./icons/user.png" alt="user"></button>
-
             <button data-modal class="btn btn_white">Order</button>
-            
         </div>
     </header>
     <div class="sidepanel">
@@ -269,7 +267,10 @@
                 <a href="https://www.facebook.com/profile.php?id=100013816624430" class="link">Facebook</a>
             </div>
             <div class="pepper">
-                <img src="icons/veg.svg" alt="pepper">
+                <a href="#header" class="pepper">
+                    <img src="icons/veg.svg" alt="pepper">
+                </a>
+                
             </div>
             <div class="call">
                 <div class="subtitle">My contact</div>

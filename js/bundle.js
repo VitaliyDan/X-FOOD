@@ -420,6 +420,28 @@ function regModal(){
 
 /***/ }),
 
+/***/ "./js/modules/shop.js":
+/*!****************************!*\
+  !*** ./js/modules/shop.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function shop(){
+    const shopMenu = document.querySelectorAll('.shopBtn');
+    shopMenu.forEach(e => {
+        e.addEventListener("click", ()=>{
+            console.log(1);
+        })
+    })
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (shop);
+
+/***/ }),
+
 /***/ "./js/modules/slider.js":
 /*!******************************!*\
   !*** ./js/modules/slider.js ***!
@@ -727,12 +749,14 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_cards__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/cards */ "./js/modules/cards.js");
 /* harmony import */ var _modules_regModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/regModal */ "./js/modules/regModal.js");
-/* harmony import */ var _modules_clac__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/clac */ "./js/modules/clac.js");
-/* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/forms */ "./js/modules/forms.js");
-/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/modal */ "./js/modules/modal.js");
-/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
-/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/tabs */ "./js/modules/tabs.js");
-/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/timer */ "./js/modules/timer.js");
+/* harmony import */ var _modules_shop__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/shop */ "./js/modules/shop.js");
+/* harmony import */ var _modules_clac__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/clac */ "./js/modules/clac.js");
+/* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/forms */ "./js/modules/forms.js");
+/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/modal */ "./js/modules/modal.js");
+/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
+/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/tabs */ "./js/modules/tabs.js");
+/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/timer */ "./js/modules/timer.js");
+
 
 
 
@@ -745,15 +769,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener('DOMContentLoaded', function () {
-    const modalTimerId = setTimeout(()=> (0,_modules_modal__WEBPACK_IMPORTED_MODULE_4__.openModal)('.modal', modalTimerId), 10000);
+    const modalTimerId = setTimeout(()=> (0,_modules_modal__WEBPACK_IMPORTED_MODULE_5__.openModal)('.modal', modalTimerId), 10000);
     (0,_modules_cards__WEBPACK_IMPORTED_MODULE_0__["default"])();
     (0,_modules_regModal__WEBPACK_IMPORTED_MODULE_1__["default"])();
-    (0,_modules_clac__WEBPACK_IMPORTED_MODULE_2__["default"])();
-    (0,_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])(modalTimerId);
-    (0,_modules_modal__WEBPACK_IMPORTED_MODULE_4__["default"])('[data-modal]', '.modal', modalTimerId);
-    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_5__["default"])();
-    (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_6__["default"])();
-    (0,_modules_timer__WEBPACK_IMPORTED_MODULE_7__["default"])();
+    (0,_modules_shop__WEBPACK_IMPORTED_MODULE_2__["default"])();
+    (0,_modules_clac__WEBPACK_IMPORTED_MODULE_3__["default"])();
+    (0,_modules_forms__WEBPACK_IMPORTED_MODULE_4__["default"])(modalTimerId);
+    (0,_modules_modal__WEBPACK_IMPORTED_MODULE_5__["default"])('[data-modal]', '.modal', modalTimerId);
+    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_6__["default"])();
+    (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_7__["default"])();
+    (0,_modules_timer__WEBPACK_IMPORTED_MODULE_8__["default"])();
 })
 })();
 
