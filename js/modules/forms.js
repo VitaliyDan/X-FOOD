@@ -1,15 +1,23 @@
 import {closeModal, openModal} from './modal';
-function forms(modalTimerId){
+function forms(modalTimerId, reqestLink){
+    
     const forms = document.querySelectorAll('form');
+          
+        
     const message = {
         loading: 'img/forms/spinner.svg',
         success: 'Thank you! Callback you soon',
         failure: 'Oppsss. Something is wrong...'
     };
 
-    forms.forEach(item => {
-        BindPost(item);
+    document.querySelector('.callReqest').addEventListener('click',()=>{ 
+
     });
+        forms.forEach(item => {
+            BindPost(item);
+            console.log('1');
+        });
+   
 
     const postData = async (url, data) => {
         const res = await fetch(url, {
@@ -22,37 +30,45 @@ function forms(modalTimerId){
         return await res.json();
     };
 
-    function BindPost(form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
 
-            // const request = new XMLHttpRequest();  // oldest version <---
-            // request.open('POST', 'server.php');    // oldest version <---
-            let statusMessage = document.createElement('img');
-            statusMessage.classList.add('img_form');
-            statusMessage.src = message.loading;
-            statusMessage.textContent = message.loading;
-            //  form.append(statusMessage); // crash last form. fix code --->
-            form.insertAdjacentElement('afterend', statusMessage);
 
-            const formData = new FormData(form);
+        function BindPost(form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                console.log('2');
+    
+                // const request = new XMLHttpRequest();  // oldest version <---
+                // request.open('POST', 'server.php');    // oldest version <---
+                let statusMessage = document.createElement('img');
+                statusMessage.classList.add('img_form');
+                statusMessage.src = message.loading;
+                statusMessage.textContent = message.loading;
+                //  form.append(statusMessage); // crash last form. fix code --->
+                form.insertAdjacentElement('afterend', statusMessage);
+    
+                const formData = new FormData(form);
+    
+                // Transform in json 
+                const json = JSON.stringify(Object.fromEntries(formData.entries()));
+                
+                postData(reqestLink, json)
+                    .then(data => {
+                        console.log(data);
+                        showResponseModal(message.success);
+                        form.reset();
+                        statusMessage.remove();
+                    }).catch(() => {
+                        showResponseModal(message.failure);
+                    }).finally(() => {
+                        form.reset();
+                        setTimeout(() => {
+                            location.reload();  
+                        }, 1500);
+                    })
+            });
+  
+        }     
 
-            // Transform in json 
-            const json = JSON.stringify(Object.fromEntries(formData.entries()));
-
-            postData('http://localhost:3000/requests', json)
-                .then(data => {
-                    console.log(data);
-                    showResponseModal(message.success);
-                    form.reset();
-                    statusMessage.remove();
-                }).catch(() => {
-                    showResponseModal(message.failure);
-                }).finally(() => {
-                    form.reset();
-                })
-        });
-    }
 
     function showResponseModal(message) {
         const prevModal = document.querySelector('.modal__dialog');
