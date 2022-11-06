@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', function () {
     regModal();
     shop();
     calc();
-    forms(modalTimerId, 'http://localhost:3000/order');
+    forms(modalTimerId);
     modal('[data-modal]', '.modal', modalTimerId);
     slider();
     tabs();

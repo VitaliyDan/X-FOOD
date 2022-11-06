@@ -202,25 +202,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modal */ "./js/modules/modal.js");
 
-function forms(modalTimerId, reqestLink){
-    
-    const forms = document.querySelectorAll('formWare');
-          
-        
+function forms(modalTimerId){
+    const forms = document.querySelectorAll('.formWare');
     const message = {
         loading: 'img/forms/spinner.svg',
         success: 'Thank you! Callback you soon',
         failure: 'Oppsss. Something is wrong...'
     };
 
-    document.querySelector('.callReqest').addEventListener('click',()=>{ 
-
+    forms.forEach(item => {
+        BindPost(item);
     });
-        forms.forEach(item => {
-            BindPost(item);
-            console.log('1');
-        });
-   
 
     const postData = async (url, data) => {
         const res = await fetch(url, {
@@ -233,45 +225,37 @@ function forms(modalTimerId, reqestLink){
         return await res.json();
     };
 
+    function BindPost(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
 
+            // const request = new XMLHttpRequest();  // oldest version <---
+            // request.open('POST', 'server.php');    // oldest version <---
+            let statusMessage = document.createElement('img');
+            statusMessage.classList.add('img_form');
+            statusMessage.src = message.loading;
+            statusMessage.textContent = message.loading;``
+            //  form.append(statusMessage); // crash last form. fix code --->
+            form.insertAdjacentElement('afterend', statusMessage);
 
-        function BindPost(form) {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                console.log('2');
-    
-                // const request = new XMLHttpRequest();  // oldest version <---
-                // request.open('POST', 'server.php');    // oldest version <---
-                let statusMessage = document.createElement('img');
-                statusMessage.classList.add('img_form');
-                statusMessage.src = message.loading;
-                statusMessage.textContent = message.loading;
-                //  form.append(statusMessage); // crash last form. fix code --->
-                form.insertAdjacentElement('afterend', statusMessage);
-    
-                const formData = new FormData(form);
-    
-                // Transform in json 
-                const json = JSON.stringify(Object.fromEntries(formData.entries()));
-                
-                postData(reqestLink, json)
-                    .then(data => {
-                        console.log(data);
-                        showResponseModal(message.success);
-                        form.reset();
-                        statusMessage.remove();
-                    }).catch(() => {
-                        showResponseModal(message.failure);
-                    }).finally(() => {
-                        form.reset();
-                        setTimeout(() => {
-                            location.reload();  
-                        }, 1500);
-                    })
-            });
-  
-        }     
+            const formData = new FormData(form);
 
+            // Transform in json 
+            const json = JSON.stringify(Object.fromEntries(formData.entries()));
+
+            postData('http://localhost:3000/order', json)
+                .then(data => {
+                    console.log(data);
+                    showResponseModal(message.success);
+                    form.reset();
+                    statusMessage.remove();
+                }).catch(() => {
+                    showResponseModal(message.failure);
+                }).finally(() => {
+                    form.reset();
+                })
+        });
+    }
 
     function showResponseModal(message) {
         const prevModal = document.querySelector('.modal__dialog');
@@ -291,7 +275,7 @@ function forms(modalTimerId, reqestLink){
             prevModal.classList.add('show');
             prevModal.classList.remove('hide');
             (0,_modal__WEBPACK_IMPORTED_MODULE_0__.closeModal)('.modal');
-        }, 8000);
+        }, 2000);
     }
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (forms);
@@ -431,6 +415,9 @@ function regModal(){
         const type = element.getAttribute('type') === 'password' ? 'text' : 'password'
         element.setAttribute('type', type)
     }
+
+    
+
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (regModal);
 
@@ -790,7 +777,7 @@ window.addEventListener('DOMContentLoaded', function () {
     (0,_modules_regModal__WEBPACK_IMPORTED_MODULE_1__["default"])();
     (0,_modules_shop__WEBPACK_IMPORTED_MODULE_2__["default"])();
     (0,_modules_clac__WEBPACK_IMPORTED_MODULE_3__["default"])();
-    (0,_modules_forms__WEBPACK_IMPORTED_MODULE_4__["default"])(modalTimerId, 'http://localhost:3000/order');
+    (0,_modules_forms__WEBPACK_IMPORTED_MODULE_4__["default"])(modalTimerId);
     (0,_modules_modal__WEBPACK_IMPORTED_MODULE_5__["default"])('[data-modal]', '.modal', modalTimerId);
     (0,_modules_slider__WEBPACK_IMPORTED_MODULE_6__["default"])();
     (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_7__["default"])();

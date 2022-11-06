@@ -1,12 +1,4 @@
 {
-  "users": [
-    {
-      "email": "qwe@qwe",
-      "password": "$2a$10$bHsW0/8VODFE02tcvh3LmuM4Ixj8BKWjPYnreIKxUFStlMZSe2qPi",
-      "username": "qwe",
-      "id": 1
-    }
-  ],
   "menu": [
     {
       "src": "img/menu/snackbar.jpg",
@@ -72,5 +64,6 @@
       "price": 43
     }
   ],
+  "users": [],
   "order": []
 }

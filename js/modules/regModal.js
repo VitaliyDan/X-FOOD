@@ -56,5 +56,8 @@ function regModal(){
         const type = element.getAttribute('type') === 'password' ? 'text' : 'password'
         element.setAttribute('type', type)
     }
+
+    
+
 }
 export default regModal;

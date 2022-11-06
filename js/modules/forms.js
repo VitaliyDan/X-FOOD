@@ -1,23 +1,15 @@
 import {closeModal, openModal} from './modal';
-function forms(modalTimerId, reqestLink){
-    
-    const forms = document.querySelectorAll('formWare');
-          
-        
+function forms(modalTimerId){
+    const forms = document.querySelectorAll('.formWare');
     const message = {
         loading: 'img/forms/spinner.svg',
         success: 'Thank you! Callback you soon',
         failure: 'Oppsss. Something is wrong...'
     };
 
-    document.querySelector('.callReqest').addEventListener('click',()=>{ 
-
+    forms.forEach(item => {
+        BindPost(item);
     });
-        forms.forEach(item => {
-            BindPost(item);
-            console.log('1');
-        });
-   
 
     const postData = async (url, data) => {
         const res = await fetch(url, {
@@ -30,45 +22,37 @@ function forms(modalTimerId, reqestLink){
         return await res.json();
     };
 
+    function BindPost(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
 
+            // const request = new XMLHttpRequest();  // oldest version <---
+            // request.open('POST', 'server.php');    // oldest version <---
+            let statusMessage = document.createElement('img');
+            statusMessage.classList.add('img_form');
+            statusMessage.src = message.loading;
+            statusMessage.textContent = message.loading;``
+            //  form.append(statusMessage); // crash last form. fix code --->
+            form.insertAdjacentElement('afterend', statusMessage);
 
-        function BindPost(form) {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                console.log('2');
-    
-                // const request = new XMLHttpRequest();  // oldest version <---
-                // request.open('POST', 'server.php');    // oldest version <---
-                let statusMessage = document.createElement('img');
-                statusMessage.classList.add('img_form');
-                statusMessage.src = message.loading;
-                statusMessage.textContent = message.loading;
-                //  form.append(statusMessage); // crash last form. fix code --->
-                form.insertAdjacentElement('afterend', statusMessage);
-    
-                const formData = new FormData(form);
-    
-                // Transform in json 
-                const json = JSON.stringify(Object.fromEntries(formData.entries()));
-                
-                postData(reqestLink, json)
-                    .then(data => {
-                        console.log(data);
-                        showResponseModal(message.success);
-                        form.reset();
-                        statusMessage.remove();
-                    }).catch(() => {
-                        showResponseModal(message.failure);
-                    }).finally(() => {
-                        form.reset();
-                        setTimeout(() => {
-                            location.reload();  
-                        }, 1500);
-                    })
-            });
-  
-        }     
+            const formData = new FormData(form);
 
+            // Transform in json 
+            const json = JSON.stringify(Object.fromEntries(formData.entries()));
+
+            postData('http://localhost:3000/order', json)
+                .then(data => {
+                    console.log(data);
+                    showResponseModal(message.success);
+                    form.reset();
+                    statusMessage.remove();
+                }).catch(() => {
+                    showResponseModal(message.failure);
+                }).finally(() => {
+                    form.reset();
+                })
+        });
+    }
 
     function showResponseModal(message) {
         const prevModal = document.querySelector('.modal__dialog');
@@ -88,7 +72,7 @@ function forms(modalTimerId, reqestLink){
             prevModal.classList.add('show');
             prevModal.classList.remove('hide');
             closeModal('.modal');
-        }, 8000);
+        }, 2000);
     }
 }
 export default forms;

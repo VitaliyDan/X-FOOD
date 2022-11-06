@@ -4,10 +4,8 @@ async function login(event) {
     const inputs = Array.from(event.target.querySelectorAll('.reg'));
     const loginData = {};
     for (const input of inputs) {
-        console.log('inputs: ', input.value);
         loginData[input.name] = input.value;
     }
-    console.log(loginData);
 
     fetch('http://localhost:3000/users', {
         method: "POST",
@@ -18,5 +16,4 @@ async function login(event) {
     })
         .then(res => res.json())
         .then(data => console.log(data))
-
 }
