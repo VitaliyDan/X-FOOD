@@ -1,4 +1,12 @@
 {
+  "users": [
+    {
+      "email": "qwe@qwe",
+      "password": "$2a$10$bHsW0/8VODFE02tcvh3LmuM4Ixj8BKWjPYnreIKxUFStlMZSe2qPi",
+      "username": "qwe",
+      "id": 1
+    }
+  ],
   "menu": [
     {
       "src": "img/menu/snackbar.jpg",
@@ -62,14 +70,6 @@
       "title": "Kellogg's Special K Protein Bars",
       "descr": "Deliciously portable protein meal bar made to fuel and fill you up without slowing you down. Satisfies taste buds with a rich, creamy coating outside and fruity bursts of strawberry flavor inside.",
       "price": 43
-    }
-  ],
-  "userlogin": [
-    {
-      "id": 1
-    },
-    {
-      "id": 2
     }
   ],
   "order": []
