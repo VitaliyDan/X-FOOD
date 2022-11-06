@@ -16,13 +16,7 @@ window.addEventListener('DOMContentLoaded', function () {
     regModal();
     shop();
     calc();
-    if(document.querySelector('.btn_white').onclick = function(){
-        return forms(modalTimerId, 'http://localhost:3000/order');
-        
-    });
-    if(document.getElementById('regestrIn').onclick = function(){
-        return forms(modalTimerId, 'http://localhost:3000/userlogin');
-    });
+    forms(modalTimerId, 'http://localhost:3000/order');
     modal('[data-modal]', '.modal', modalTimerId);
     slider();
     tabs();

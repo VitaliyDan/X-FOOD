@@ -66,17 +66,11 @@
   ],
   "userlogin": [
     {
-      "username": "123213",
-      "surname": "vitailyc.ua@gmail.com",
-      "pass": "12311431",
       "id": 1
+    },
+    {
+      "id": 2
     }
   ],
-  "order": [
-    {
-      "nameWare": "ASdsadsafsd",
-      "phone": "+380000000",
-      "id": 1
-    }
-  ]
+  "order": []
 }

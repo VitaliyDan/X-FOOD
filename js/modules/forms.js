@@ -1,7 +1,7 @@
 import {closeModal, openModal} from './modal';
 function forms(modalTimerId, reqestLink){
     
-    const forms = document.querySelectorAll('form');
+    const forms = document.querySelectorAll('formWare');
           
         
     const message = {

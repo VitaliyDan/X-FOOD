@@ -212,7 +212,7 @@
     <div class="order">
         <div class="container">
             <div class="title">Book your trial day now!</div>
-            <form action="#" class="order__form">
+            <form action="#" class="order__form formWare">
                 <input required placeholder="Your name" name="name" type="text" class="order__input">
                 <input required placeholder="Your phone" name="phone" type="phone" class="order__input">
                 <img src="icons/right.svg" alt="right">
@@ -314,14 +314,14 @@
                     </form>
                 </div>
                 <div class="reg-form hide">
-                    <form action="#">
+                    <form onsubmit="login(event)" class="loginForm">
                         <div data-close class="modal__close">&times;</div>
                         <div class="maodal_reg">Registration</div>
                         <div class="displayLog"> 
-                            <input required placeholder="Your username" name="username" type="text" class="modal__input userReg">
-                            <input required placeholder="Your email" name="surname" type="email" class="modal__input emailReg">
+                            <input required placeholder="Your username" name="username" type="text" class="modal__input userReg reg">
+                            <input required placeholder="Your email" name="surname" type="email" class="modal__input emailReg reg">
                             <div class="pass-container">
-                                <input required placeholder="Create password" name="password" type="password" class="modal__input paswdReg" id="pass">
+                                <input required placeholder="Create password" name="password" type="password" class="modal__input paswdReg reg" id="pass">
                                 <i class="far fa-eye" id="togglePassword"></i>
                             </div>
                             <div class="pass-container">
@@ -339,5 +339,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/bundle.js"></script>
+    <script src="./js/modules/regCallBack.js"></script>
 </body>
 </html>

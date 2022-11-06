@@ -204,7 +204,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function forms(modalTimerId, reqestLink){
     
-    const forms = document.querySelectorAll('form');
+    const forms = document.querySelectorAll('formWare');
           
         
     const message = {
@@ -790,13 +790,7 @@ window.addEventListener('DOMContentLoaded', function () {
     (0,_modules_regModal__WEBPACK_IMPORTED_MODULE_1__["default"])();
     (0,_modules_shop__WEBPACK_IMPORTED_MODULE_2__["default"])();
     (0,_modules_clac__WEBPACK_IMPORTED_MODULE_3__["default"])();
-    if(document.querySelector('.btn_white').onclick = function(){
-        return (0,_modules_forms__WEBPACK_IMPORTED_MODULE_4__["default"])(modalTimerId, 'http://localhost:3000/order');
-        
-    });
-    if(document.getElementById('regestrIn').onclick = function(){
-        return (0,_modules_forms__WEBPACK_IMPORTED_MODULE_4__["default"])(modalTimerId, 'http://localhost:3000/userlogin');
-    });
+    (0,_modules_forms__WEBPACK_IMPORTED_MODULE_4__["default"])(modalTimerId, 'http://localhost:3000/order');
     (0,_modules_modal__WEBPACK_IMPORTED_MODULE_5__["default"])('[data-modal]', '.modal', modalTimerId);
     (0,_modules_slider__WEBPACK_IMPORTED_MODULE_6__["default"])();
     (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_7__["default"])();
