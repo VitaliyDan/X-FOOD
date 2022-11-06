@@ -848,7 +848,7 @@ i.login {
 	border-radius: 25px;
 }
 
-.maodal_reg {
+.maodal_reg, .modal_log{
 	font-size: 40px;
 	color: rgb(7, 7, 5);
 	margin: 20px auto 20px auto;

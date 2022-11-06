@@ -1,7 +1,7 @@
 
 async function signIn(event) {
     event.preventDefault()
-    const inputs = Array.from(event.target.querySelectorAll('.reg'));
+    const inputs = Array.from(event.target.querySelectorAll('.logReqest'));
     const loginData = {};
     for (const input of inputs) {
         loginData[input.name] = input.value;
