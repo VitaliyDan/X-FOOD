@@ -1,6 +1,6 @@
 
 async function login(event) {
-    event.preventDefault()
+    event.preventDefault();
     const inputs = Array.from(event.target.querySelectorAll('.reg'));
     const loginData = {};
     for (const input of inputs) {
