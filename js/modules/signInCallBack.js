@@ -6,6 +6,8 @@
         if(localStorage.accessToken === 'undefined' || localStorage.getItem('accessToken') == null){
           openShop.style.display = "none";
           console.log(localStorage);
+          console.log(localStorage.user)
+  
       }else{
           openShop.style.display = "block";
           addUser.classList = "hide";
@@ -31,10 +33,12 @@ async function signIn(event) {
         }
     })
     const responseData = await response.json(),
-          {accessToken} = responseData;
+          {accessToken, user} = responseData;
           localStorage.accessToken = accessToken; 
+          localStorage.users = user.value;
           console.log(responseData);
           checkToken();
+
 
 
 

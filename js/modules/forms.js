@@ -1,5 +1,5 @@
 import {closeModal, openModal} from './modal';
-function forms(modalTimerId){
+function forms(){
     const forms = document.querySelectorAll('.formWare');
     const message = {
         loading: 'img/forms/spinner.svg',
@@ -57,7 +57,7 @@ function forms(modalTimerId){
     function showResponseModal(message) {
         const prevModal = document.querySelector('.modal__dialog');
         prevModal.classList.add('hide');
-        openModal('.modal',modalTimerId);
+        openModal('.modal',);
         const createModal = document.createElement('div');
         createModal.classList.add('modal__dialog');
         createModal.innerHTML = `
@@ -74,5 +74,6 @@ function forms(modalTimerId){
             closeModal('.modal');
         }, 2000);
     }
+
 }
 export default forms;
