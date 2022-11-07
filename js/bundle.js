@@ -245,41 +245,46 @@ function forms(){
 
             postData('http://localhost:3000/order', json)
                 .then(data => {
-                    console.log(data);
-                    showResponseModal(message.success);
+                    (0,_modal__WEBPACK_IMPORTED_MODULE_0__.showResponseModal)(message.success);
                     form.reset();
                     statusMessage.remove();
                 }).catch(() => {
-                    showResponseModal(message.failure);
+                    (0,_modal__WEBPACK_IMPORTED_MODULE_0__.showResponseModal)(message.failure);
                 }).finally(() => {
                     form.reset();
                 })
         });
     }
 
-    function showResponseModal(message) {
-        const prevModal = document.querySelector('.modal__dialog');
-        prevModal.classList.add('hide');
-        (0,_modal__WEBPACK_IMPORTED_MODULE_0__.openModal)('.modal',);
-        const createModal = document.createElement('div');
-        createModal.classList.add('modal__dialog');
-        createModal.innerHTML = `
-            <div class="modal__content">
-                <div class="modal__close" data-close>×</div>
-                <div class="modal__title">${message}</div>
-            </div>
-        `;
-        document.querySelector('.modal').append(createModal);
-        setTimeout(() => {
-            createModal.remove();
-            prevModal.classList.add('show');
-            prevModal.classList.remove('hide');
-            (0,_modal__WEBPACK_IMPORTED_MODULE_0__.closeModal)('.modal');
-        }, 2000);
-    }
-
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (forms);
+
+/***/ }),
+
+/***/ "./js/modules/logout.js":
+/*!******************************!*\
+  !*** ./js/modules/logout.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+
+function logout(){
+    const shopMenu = document.querySelectorAll('.logout');
+    shopMenu.forEach(e => {
+        e.addEventListener("click", ()=>{
+            
+            localStorage.removeItem("accessToken");
+            localStorage.removeItem("user");
+            location.reload();
+
+        })
+    })
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (logout);
 
 /***/ }),
 
@@ -293,13 +298,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "closeModal": () => (/* binding */ closeModal),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "openModal": () => (/* binding */ openModal)
+/* harmony export */   "openModal": () => (/* binding */ openModal),
+/* harmony export */   "showResponseModal": () => (/* binding */ showResponseModal)
 /* harmony export */ });
 function closeModal(modalSelector) {
     const modal = document.querySelector(modalSelector);
     modal.classList.add('hide');
     modal.classList.remove('show');
     document.body.style.overflow = '';
+}
+
+function showResponseModal(message) {
+    const prevModal = document.querySelector('.modal__dialog');
+    prevModal.classList.add('hide');
+    openModal('.modal',);
+    const createModal = document.createElement('div');
+    createModal.classList.add('modal__dialog');
+    createModal.innerHTML = `
+        <div class="modal__content">
+            <div class="modal__close" data-close>×</div>
+            <div class="modal__title">${message}</div>
+        </div>
+    `;
+    document.querySelector('.modal').append(createModal);
+    setTimeout(() => {
+        createModal.remove();
+        prevModal.classList.add('show');
+        prevModal.classList.remove('hide');
+        closeModal('.modal');
+    }, 2000);
 }
 
 function openModal(modalSelector) {
@@ -340,6 +367,8 @@ function showModalByScroll() {
 window.addEventListener('scroll', showModalByScroll);
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);
+
+
 
 
 
@@ -418,32 +447,6 @@ function regModal(){
 
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (regModal);
-
-/***/ }),
-
-/***/ "./js/modules/shop.js":
-/*!****************************!*\
-  !*** ./js/modules/shop.js ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-
-function shop(){
-    const shopMenu = document.querySelectorAll('.shopBtn');
-    shopMenu.forEach(e => {
-        e.addEventListener("click", ()=>{
-            console.log(1);
-            localStorage.removeItem("accessToken");
-            location.reload();
-
-        })
-    })
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (shop);
 
 /***/ }),
 
@@ -754,7 +757,7 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_cards__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/cards */ "./js/modules/cards.js");
 /* harmony import */ var _modules_regModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/regModal */ "./js/modules/regModal.js");
-/* harmony import */ var _modules_shop__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/shop */ "./js/modules/shop.js");
+/* harmony import */ var _modules_logout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/logout */ "./js/modules/logout.js");
 /* harmony import */ var _modules_clac__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/clac */ "./js/modules/clac.js");
 /* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/forms */ "./js/modules/forms.js");
 /* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/modal */ "./js/modules/modal.js");
@@ -776,7 +779,7 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('DOMContentLoaded', function () {
     (0,_modules_cards__WEBPACK_IMPORTED_MODULE_0__["default"])();
     (0,_modules_regModal__WEBPACK_IMPORTED_MODULE_1__["default"])();
-    (0,_modules_shop__WEBPACK_IMPORTED_MODULE_2__["default"])();
+    (0,_modules_logout__WEBPACK_IMPORTED_MODULE_2__["default"])();
     (0,_modules_clac__WEBPACK_IMPORTED_MODULE_3__["default"])();
     (0,_modules_forms__WEBPACK_IMPORTED_MODULE_4__["default"])();
     (0,_modules_modal__WEBPACK_IMPORTED_MODULE_5__["default"])('[data-modal]', '.modal');

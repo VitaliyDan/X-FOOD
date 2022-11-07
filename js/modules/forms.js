@@ -1,4 +1,4 @@
-import {closeModal, openModal} from './modal';
+import {showResponseModal} from './modal'
 function forms(){
     const forms = document.querySelectorAll('.formWare');
     const message = {
@@ -42,7 +42,6 @@ function forms(){
 
             postData('http://localhost:3000/order', json)
                 .then(data => {
-                    console.log(data);
                     showResponseModal(message.success);
                     form.reset();
                     statusMessage.remove();
@@ -52,27 +51,6 @@ function forms(){
                     form.reset();
                 })
         });
-    }
-
-    function showResponseModal(message) {
-        const prevModal = document.querySelector('.modal__dialog');
-        prevModal.classList.add('hide');
-        openModal('.modal',);
-        const createModal = document.createElement('div');
-        createModal.classList.add('modal__dialog');
-        createModal.innerHTML = `
-            <div class="modal__content">
-                <div class="modal__close" data-close>×</div>
-                <div class="modal__title">${message}</div>
-            </div>
-        `;
-        document.querySelector('.modal').append(createModal);
-        setTimeout(() => {
-            createModal.remove();
-            prevModal.classList.add('show');
-            prevModal.classList.remove('hide');
-            closeModal('.modal');
-        }, 2000);
     }
 
 }

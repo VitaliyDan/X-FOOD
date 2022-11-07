@@ -27,9 +27,9 @@
         <div class="header__right-block">
             <button class="shopBtn"><img class="openShop" style="max-width: 45px; display: none;"
                     src="./icons/cartshop.png" alt="shop"></button>
-            <button class="userBtn" id="openFormBtn"><img style="max-width: 50px;" src="./icons/user.png"
+            <button class="userBtn openUserForm" id="openFormBtn"><img style="max-width: 50px; margin-top: 8px" src="./icons/user.png"
                     alt="user"></button>
-            <button class="userBtn hide" id="openUser"><img style="max-width: 45px;" src="./icons/myProfile.png"
+            <button class="userBtn logout hide" id="logout"><img style="max-width: 45px;" src="./icons/logout.png"
                     alt="user"></button>
 
             <button data-modal class="btn btn_white">Order</button>
@@ -335,7 +335,7 @@
                     </form>
                 </div>
                 <div class="reg-form hide">
-                    <form onsubmit="login(event)" class="loginForm">
+                    <form onsubmit="Registration(event)" class="loginForm">
                         <div data-close class="modal__close">&times;</div>
                         <div class="maodal_reg">Registration</div>
                         <div class="displayLog">
@@ -365,7 +365,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/bundle.js"></script>
     <script src="./js/modules/regCallBack.js"></script>
-    <script src="./js/modules/signInCallBack.js"></script>
 </body>
 
 </html>

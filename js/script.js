@@ -1,7 +1,7 @@
 'use strict';
 import cards from './modules/cards';
 import regModal from './modules/regModal';
-import shop from './modules/shop';
+import logout from './modules/logout';
 import calc from './modules/clac';
 import forms from './modules/forms';
 import modal from './modules/modal';
@@ -13,7 +13,7 @@ import timer from './modules/timer';
 window.addEventListener('DOMContentLoaded', function () {
     cards();
     regModal();
-    shop();
+    logout();
     calc();
     forms();
     modal('[data-modal]', '.modal');

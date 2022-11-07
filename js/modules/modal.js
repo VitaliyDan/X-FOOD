@@ -5,6 +5,27 @@ function closeModal(modalSelector) {
     document.body.style.overflow = '';
 }
 
+function showResponseModal(message) {
+    const prevModal = document.querySelector('.modal__dialog');
+    prevModal.classList.add('hide');
+    openModal('.modal',);
+    const createModal = document.createElement('div');
+    createModal.classList.add('modal__dialog');
+    createModal.innerHTML = `
+        <div class="modal__content">
+            <div class="modal__close" data-close>×</div>
+            <div class="modal__title">${message}</div>
+        </div>
+    `;
+    document.querySelector('.modal').append(createModal);
+    setTimeout(() => {
+        createModal.remove();
+        prevModal.classList.add('show');
+        prevModal.classList.remove('hide');
+        closeModal('.modal');
+    }, 2000);
+}
+
 function openModal(modalSelector) {
     const modal = document.querySelector(modalSelector);
     modal.classList.add('show');
@@ -45,3 +66,4 @@ window.addEventListener('scroll', showModalByScroll);
 export default modal;
 export {closeModal};
 export {openModal};
+export {showResponseModal};

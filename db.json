@@ -64,66 +64,6 @@
       "price": 43
     }
   ],
-  "users": [
-    {
-      "email": "vitalik@gmail.com",
-      "password": "$2a$10$nZK2r1aDuyixYJ4t5pvmT.e0780gIVOtB03Ycsvz37C6MGwCobaVS",
-      "username": "Roman",
-      "id": 1
-    },
-    {
-      "email": "vi@t",
-      "password": "$2a$10$Vo2ThE7UPN9WZlnkiCz1.ehpzLbSFZArCIcv5SyEh6iCpTPX2CJ2i",
-      "username": "Roman",
-      "id": 2
-    },
-    {
-      "email": "vi@ttt",
-      "password": "$2a$10$BZMnrNidmeXmKy6o91gYTeoJma0uKEzV2V59vkKG4n5gDJ6uwDT0m",
-      "username": "ewrstdghf",
-      "id": 3
-    },
-    {
-      "email": "sadfghfds@df",
-      "password": "$2a$10$VGel13R7dChcxwQ4UM55oOT1FxF8n.pzdf4O5OhEoWdw9kLwyqGlG",
-      "username": "123213",
-      "id": 4
-    },
-    {
-      "email": "112@sdf",
-      "password": "$2a$10$R44USfhl4Rz09APxEaCQfeCDr6Wup0B6f3ZyVLQ4cLQw8xeteQVIy",
-      "username": "Roman",
-      "id": 5
-    },
-    {
-      "email": "nhbgdfvc@3rtys",
-      "password": "$2a$10$MZKaKaLA0AkxTkHyWyXbxejbtGuUOhVmoaYWWcuEhhcZJut77DqEi",
-      "username": "sdafdsaa",
-      "id": 6
-    },
-    {
-      "email": "dfgd@dfghwd",
-      "password": "$2a$10$uhTun3Tijvu72mPDvbG0fOma5R8q9HrX54K2wb2v6MFCoqPUsfJjO",
-      "username": "Roman",
-      "id": 7
-    },
-    {
-      "email": "vitalik@gmail.cdsom",
-      "password": "$2a$10$ZDZeoiddnS4WT9oV37zx.ezbYW/YHnfoG4ljZ5FmrKH2ZDh5HLC1S",
-      "username": "ewrstdghf",
-      "id": 8
-    }
-  ],
-  "order": [
-    {
-      "nameWare": "Vega Sport Premium Protein Powder",
-      "phone": "+380508700185",
-      "id": 1
-    },
-    {
-      "nameWare": "Vega Sport Premium Protein Powder",
-      "phone": "+380508700185",
-      "id": 2
-    }
-  ]
+  "users": [],
+  "order": []
 }
