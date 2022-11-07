@@ -25,10 +25,13 @@
             </nav>
         </div>
         <div class="header__right-block">
-            <button class="shopBtn" id="openShop"><img style="max-width: 45px; display: none;"
+            <button class="shopBtn"><img class="openShop" style="max-width: 45px; display: none;"
                     src="./icons/cartshop.png" alt="shop"></button>
             <button class="userBtn" id="openFormBtn"><img style="max-width: 50px;" src="./icons/user.png"
                     alt="user"></button>
+            <button class="userBtn hide" id="openUser"><img style="max-width: 45px;" src="./icons/myProfile.png"
+                    alt="user"></button>
+
             <button data-modal class="btn btn_white">Order</button>
         </div>
     </header>
@@ -314,11 +317,11 @@
         <div class="modal__reg">
             <div class="modal__content">
                 <div class="registr-btns">
-                    <button id="logIn" class="regbtn">Login</button>
-                    <button id="regestrIn" class="regbtn">Register</button>
+                    <button id="logIn" class="modalBtn">Login</button>
+                    <button id="regestrIn" class="modalBtn">Register</button>
                 </div>
                 <div class="login-form">
-                    <form onsubmit="signIn" action="#">
+                    <form onsubmit="signIn(event)" action="#">
                         <div data-close class="modal__close">&times;</div>
                         <div class="modal_log">Sign in</div>
                         <input required placeholder="Your email" name="email" type="email"
@@ -338,8 +341,7 @@
                         <div class="displayLog">
                             <input required placeholder="Your username" name="username" type="text"
                                 class="modal__input reg">
-                            <input required placeholder="Your email" name="email" type="email"
-                                class="modal__input reg">
+                            <input required placeholder="Your email" name="email" type="email" class="modal__input reg">
                             <div class="pass-container">
                                 <input required placeholder="Create password" name="password" type="password"
                                     class="modal__input reg" id="pass">

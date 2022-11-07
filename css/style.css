@@ -762,7 +762,7 @@ ol {
 
 }
 
-.regbtn {
+.modalBtn {
 
 	width: 200px;
 	font-size: 20px;
@@ -772,7 +772,7 @@ ol {
 	border-radius: 25px;
 }
 
-.regbtn:hover {
+.modalBtn:hover {
 	background-color: #50ff05;
 }
 
