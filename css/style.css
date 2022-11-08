@@ -899,6 +899,9 @@ i.login {
 .hide {
 	display: none;
 }
+.invalid{
+	border-color: red;
+}
 
 .slider-inner {
 	display: flex;

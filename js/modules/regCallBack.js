@@ -4,7 +4,22 @@ function openModal(modalSelector) {
     modal.classList.remove('hide');
     document.body.style.overflow = 'hidden';
 }
-
+function valid(event){
+    const pas = document.getElementById('pass').value,
+         cpas = document.getElementById('repPass').value;
+         passwd = document.getElementById('pass');
+    for(i=0;i < cpas.length; i++)
+    {
+     if(pas[i] != cpas[i] && event.keyCode != 8)
+     {
+        passwd.classList.add('invalid');
+       break;
+     }else{
+        passwd.classList.remove('invalid');
+     }
+    }
+    }
+    // const changeColor = document.getElementById('pass')
 function showResponseModal(message) {
     const prevModal = document.querySelector('.modal__dialog');
     prevModal.classList.add('hide');

@@ -64,6 +64,13 @@
       "price": 43
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "email": "vitalik@gmail.com",
+      "password": "$2a$10$RQRYno7qAlQW1.Eh3aE6RuLbnN8SaAmKL3gNRuhJqcla0KcG8gq5K",
+      "username": "Roman",
+      "id": 1
+    }
+  ],
   "order": []
 }
