@@ -7,19 +7,21 @@ function openModal(modalSelector) {
 function valid(event){
     const pas = document.getElementById('pass').value,
          cpas = document.getElementById('repPass').value;
-         passwd = document.getElementById('pass');
+         passwd = document.getElementById('repPass'),
+         regBtn = document.querySelector('.btn_valid');
     for(i=0;i < cpas.length; i++)
     {
      if(pas[i] != cpas[i] && event.keyCode != 8)
      {
         passwd.classList.add('invalid');
+        regBtn.classList.add('hide');
        break;
      }else{
         passwd.classList.remove('invalid');
+        regBtn.classList.remove('hide');
      }
     }
     }
-    // const changeColor = document.getElementById('pass')
 function showResponseModal(message) {
     const prevModal = document.querySelector('.modal__dialog');
     prevModal.classList.add('hide');

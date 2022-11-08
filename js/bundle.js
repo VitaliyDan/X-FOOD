@@ -436,18 +436,6 @@ function ChangePasswordType (element) {
     element.setAttribute('type', type)
 }
 
-function valid(event){
-    const pas = document.getElementById('pass').value,
-         cpas = document.getElementById('repPass').value;
-    for(i=0;i < cpas.length; i++)
-    {
-     if(pas[i] != cpas[i] && event.keyCode != 8)
-     {console.log("no");
-       break;
-     }
-    }
-    }
-
  }
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (regModal);
 
