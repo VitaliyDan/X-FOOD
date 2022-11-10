@@ -1,6 +1,6 @@
 function cards() {
     class MenuCard {
-        constructor(id, src, altimg, title, descr, price, parentSelector, ) {
+        constructor(id, src, altimg, title, descr, price, parentSelector,) {
             this.id = id;
             this.src = src;
             this.altimg = altimg;
@@ -10,17 +10,23 @@ function cards() {
             this.parent = document.querySelector(parentSelector);
             this.transfer = 40;
             this.changeToUAH();
-            // this.infoObj = this.infoObj.bind(this);
+            this.infoObj = {
+                id: this.id,
+                src: this.src,
+                price: this.price,
+            };
+            this.getObj = this.getObj.bind(this);
         }
 
         changeToUAH() {
             this.price = this.price * this.transfer;
         }
 
-        infoObj = {
-            id: this.id,
-            src: this.src
-         }
+        getObj(obj) {
+            return obj;
+        }
+
+
 
 
         render() {
@@ -33,7 +39,6 @@ function cards() {
                 status += 'show'
             };
 
-
             element.innerHTML = `
                 <div class="menu__item" id="${this.id}">
                     <img src=${this.src} alt=${this.altimg}>
@@ -42,10 +47,13 @@ function cards() {
                     <div class="menu__item-divider"></div>
                     <div class="menu__item-price"> 
                         <div class="menu__item-total"><span>${this.price}</span> UAH/day</div>
-                        <button id= "${this.id}" class="buyBtn ${status}" onClick="shopMenu(${JSON.stringify(this.infoObj)})"><img style = "max-width: 100px; max-height: 65px;" src="./icons/button.png" alt="buy"></button>
+                        <button id= "${this.id}" class="buyBtn ${status}"><img style = "max-width: 100px; max-height: 65px;" src="./icons/button.png" alt="buy"></button>
                     </div>
                 </div>
             `;
+            element.getElementsByClassName('buyBtn')[0].addEventListener('click', () => {
+                shopMenu(this.infoObj);
+            });
             this.parent.append(element);
         }
     }

@@ -1,6 +1,4 @@
-function shopMenu(info){
-    
-    console.log(JSON.parse(info));
+function shopMenu(obj){
+    console.log('ss: ',obj);
 }
-const addShop = document.getElementsByClassName('buyBtn');
         
