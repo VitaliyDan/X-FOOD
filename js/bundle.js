@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./js/modules/cards.js":
@@ -8,13 +7,15 @@
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 function cards(){
     class MenuCard {
-        constructor(src, altimg, title, descr, price, parentSelector,) {
+        constructor(id, src, altimg, title, descr, price, parentSelector,) {
+            this.id = id;
             this.src = src;
             this.altimg = altimg;
             this.title = title;
@@ -29,18 +30,25 @@ function cards(){
             this.price = this.price * this.transfer;
         }
 
+        
+
         render() {
             const element = document.createElement('div');
+            let status = '';
+            if (localStorage.accessToken === 'undefined' || localStorage.getItem('accessToken') == null) {
+               status += 'hide';
+            }else {status += 'show'};
+
 
             element.innerHTML = `
-                <div class="menu__item">
+                <div class="menu__item" id="${this.id}">
                     <img src=${this.src} alt=${this.altimg}>
                     <h3 class="menu__item-subtitle">${this.title}</h3>
                     <div class="menu__item-descr">${this.descr}</div>
                     <div class="menu__item-divider"></div>
-                    <div class="menu__item-price">
-                        <div class="menu__item-cost">Price:</div>
+                    <div class="menu__item-price"> 
                         <div class="menu__item-total"><span>${this.price}</span> UAH/day</div>
+                        <button id= "${this.id}" class="buyBtn ${status}" onClick = "shopMenu(this)"><img style = "max-width: 100px; max-height: 65px;" src="./icons/button.png" alt="buy"></button>
                     </div>
                 </div>
             `;
@@ -58,13 +66,14 @@ function cards(){
     axios.get('http://localhost:3000/menu')
         .then(data => {
             data.data.forEach(({
+                id,
                 src,
                 altimg,
                 title,
                 descr,
                 price
             }) => {
-                new MenuCard(src, altimg, title, descr, price, ".menu .container").render();
+                new MenuCard(id,src, altimg, title, descr, price, ".menu .container").render();
             });
         });
 }
@@ -78,6 +87,7 @@ function cards(){
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -196,6 +206,7 @@ function webcalc(){
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -267,6 +278,7 @@ function forms(){
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -294,6 +306,7 @@ function logout(){
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "closeModal": () => (/* binding */ closeModal),
@@ -380,6 +393,7 @@ window.addEventListener('scroll', showModalByScroll);
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -441,12 +455,26 @@ function ChangePasswordType (element) {
 
 /***/ }),
 
+/***/ "./js/modules/shopMenu.js":
+/*!********************************!*\
+  !*** ./js/modules/shopMenu.js ***!
+  \********************************/
+/***/ (() => {
+
+function shopMenu(info){
+    console.log(info.id);
+}
+
+
+/***/ }),
+
 /***/ "./js/modules/slider.js":
 /*!******************************!*\
   !*** ./js/modules/slider.js ***!
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -568,6 +596,7 @@ function autoSlider(){
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -622,6 +651,7 @@ function tabs(){
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -710,6 +740,18 @@ function timer (){
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -740,8 +782,9 @@ function timer (){
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./js/script.js ***!
   \**********************/
@@ -751,10 +794,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_logout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/logout */ "./js/modules/logout.js");
 /* harmony import */ var _modules_clac__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/clac */ "./js/modules/clac.js");
 /* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/forms */ "./js/modules/forms.js");
-/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/modal */ "./js/modules/modal.js");
-/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
-/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/tabs */ "./js/modules/tabs.js");
-/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/timer */ "./js/modules/timer.js");
+/* harmony import */ var _modules_shopMenu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/shopMenu */ "./js/modules/shopMenu.js");
+/* harmony import */ var _modules_shopMenu__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_shopMenu__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/modal */ "./js/modules/modal.js");
+/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
+/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/tabs */ "./js/modules/tabs.js");
+/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/timer */ "./js/modules/timer.js");
+
 
 
 
@@ -772,11 +818,12 @@ window.addEventListener('DOMContentLoaded', function () {
     (0,_modules_regModal__WEBPACK_IMPORTED_MODULE_1__["default"])();
     (0,_modules_logout__WEBPACK_IMPORTED_MODULE_2__["default"])();
     (0,_modules_clac__WEBPACK_IMPORTED_MODULE_3__["default"])();
+    // shopMenu();
     (0,_modules_forms__WEBPACK_IMPORTED_MODULE_4__["default"])();
-    (0,_modules_modal__WEBPACK_IMPORTED_MODULE_5__["default"])('[data-modal]', '.modal');
-    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_6__["default"])();
-    (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_7__["default"])();
-    (0,_modules_timer__WEBPACK_IMPORTED_MODULE_8__["default"])();
+    (0,_modules_modal__WEBPACK_IMPORTED_MODULE_6__["default"])('[data-modal]', '.modal');
+    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_7__["default"])();
+    (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_8__["default"])();
+    (0,_modules_timer__WEBPACK_IMPORTED_MODULE_9__["default"])();
 })
 })();
 

@@ -1,6 +1,7 @@
 function cards(){
     class MenuCard {
-        constructor(src, altimg, title, descr, price, parentSelector,) {
+        constructor(id, src, altimg, title, descr, price, parentSelector,) {
+            this.id = id;
             this.src = src;
             this.altimg = altimg;
             this.title = title;
@@ -15,18 +16,25 @@ function cards(){
             this.price = this.price * this.transfer;
         }
 
+        
+
         render() {
             const element = document.createElement('div');
+            let status = '';
+            if (localStorage.accessToken === 'undefined' || localStorage.getItem('accessToken') == null) {
+               status += 'hide';
+            }else {status += 'show'};
+
 
             element.innerHTML = `
-                <div class="menu__item">
+                <div class="menu__item" id="${this.id}">
                     <img src=${this.src} alt=${this.altimg}>
                     <h3 class="menu__item-subtitle">${this.title}</h3>
                     <div class="menu__item-descr">${this.descr}</div>
                     <div class="menu__item-divider"></div>
-                    <div class="menu__item-price">
-                        <div class="menu__item-cost">Price:</div>
+                    <div class="menu__item-price"> 
                         <div class="menu__item-total"><span>${this.price}</span> UAH/day</div>
+                        <button id= "${this.id}" class="buyBtn ${status}" onClick = "shopMenu(this)"><img style = "max-width: 100px; max-height: 65px;" src="./icons/button.png" alt="buy"></button>
                     </div>
                 </div>
             `;
@@ -44,13 +52,14 @@ function cards(){
     axios.get('http://localhost:3000/menu')
         .then(data => {
             data.data.forEach(({
+                id,
                 src,
                 altimg,
                 title,
                 descr,
                 price
             }) => {
-                new MenuCard(src, altimg, title, descr, price, ".menu .container").render();
+                new MenuCard(id,src, altimg, title, descr, price, ".menu .container").render();
             });
         });
 }

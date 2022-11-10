@@ -29,7 +29,7 @@
                     src="./icons/cartshop.png" alt="shop"></button>
             <button class="userBtn openUserForm" id="openFormBtn"><img style="max-width: 50px; margin-top: 8px" src="./icons/user.png"
                     alt="user"></button>
-            <button class="userBtn logout hide" id="logout"><img style="max-width: 45px;" src="./icons/logout.png"
+            <button class="userBtn logout" id="logout"><img style="max-width: 45px;" src="./icons/logout.png"
                     alt="user"></button>
 
             <button data-modal class="btn btn_white">Order</button>
@@ -232,8 +232,8 @@
         <div class="container">
             <div class="title">Book your trial day now!</div>
             <form action="#" class="order__form formWare">
-                <input required placeholder="Your name" name="name" type="text" class="order__input">
-                <input required placeholder="Your phone" name="phone" type="phone" class="order__input">
+                <input required placeholder="Your name" name="name" type="text" class="order__input" autocomplete="off">
+                <input required placeholder="Your phone" name="phone" type="phone" class="order__input" autocomplete="off">
                 <img src="icons/right.svg" alt="right">
                 <button class="btn btn_dark btn_min callReqest">Call me!</button>
             </form>
@@ -306,8 +306,8 @@
                 <form action="#" class="formWare">
                     <div data-close class="modal__close">&times;</div>
                     <div class="modal__title">We callback you soon!</div>
-                    <input required placeholder="Name Ware" name="nameWare" type="text" class="modal__input">
-                    <input required placeholder="Your phone" name="phone" type="phone" class="modal__input">
+                    <input required placeholder="Name Ware" name="nameWare" type="text" class="modal__input" autocomplete="off">
+                    <input required placeholder="Your phone" name="phone" type="phone" class="modal__input" autocomplete="off">
                     <button class="btn btn_dark btn_min callReqest">Call me!</button>
                 </form>
             </div>
@@ -325,7 +325,7 @@
                     <form onsubmit="signIn(event)" action="#">
                         <div data-close class="modal__close">&times;</div>
                         <div class="modal_log">Sign in</div>
-                        <input required placeholder="Your email" name="email" type="email"
+                        <input required placeholder="Your email" name="email" type="email" autocomplete="off"
                             class="modal__input logReqest">
                         <div class="pass-container">
                             <input required placeholder="Your password" name="password" type="password"
@@ -333,6 +333,7 @@
                             <i class="far fa-eye login" id="togglePassword"></i>
                         </div>
                         <div class="log-reg-btn"><button class="btn btn_dark btn_min logBtn">Login</button></div>
+                         
                     </form>
                 </div>
                 <div class="reg-form hide">
@@ -341,8 +342,8 @@
                         <div class="maodal_reg">Registration</div>
                         <div class="displayLog">
                             <input required placeholder="Your username" name="username" type="text"
-                                class="modal__input reg">
-                            <input required placeholder="Your email" name="email" type="email" class="modal__input reg">
+                                class="modal__input reg" autocomplete="off">
+                            <input required placeholder="Your email" name="email" type="email" class="modal__input reg" autocomplete="off">
                             <div class="pass-container">
                                 <input required placeholder="Create password" name="password" type="password"
                                     class="modal__input psswd reg" id="pass">
@@ -366,6 +367,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/bundle.js"></script>
     <script src="./js/modules/regCallBack.js"></script>
+    <script src="./js/modules/shopMenu.js"></script>
 </body>
 
 </html>

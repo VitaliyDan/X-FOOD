@@ -4,6 +4,7 @@ import regModal from './modules/regModal';
 import logout from './modules/logout';
 import calc from './modules/clac';
 import forms from './modules/forms';
+import shopMenu from './modules/shopMenu';
 import modal from './modules/modal';
 import slider from './modules/slider';
 import tabs from './modules/tabs';
@@ -15,6 +16,7 @@ window.addEventListener('DOMContentLoaded', function () {
     regModal();
     logout();
     calc();
+    // shopMenu();
     forms();
     modal('[data-modal]', '.modal');
     slider();

@@ -4,6 +4,8 @@ function openModal(modalSelector) {
     modal.classList.remove('hide');
     document.body.style.overflow = 'hidden';
 }
+
+//validation
 function valid(event){
     const pas = document.getElementById('pass').value,
          cpas = document.getElementById('repPass').value;
@@ -42,7 +44,7 @@ function showResponseModal(message) {
         form.classList.remove('show');
         document.body.style.overflow = '';
         location.reload();
-    }, 3000);
+    }, 1300);
 }
 const openShop = document.querySelector('.openShop'),
     addUser = document.querySelector('.openUserForm'),
@@ -53,12 +55,12 @@ const openShop = document.querySelector('.openShop'),
 function checkToken() {
     if (localStorage.accessToken === 'undefined' || localStorage.getItem('accessToken') == null) {
         openShop.style.display = "none";
-        logout.style.display = "none";
+        logout.style.display = "none";  
     } else {
         openShop.style.display = "block";
         addUser.classList = "hide";
         logout.classList.remove('hide');
-        logout.classList.add('show');
+        logout.classList.add('show');       
     }
 }
 
@@ -98,7 +100,7 @@ async function signIn(event) {
 
 
 }
-document.addEventListener('DOMContentLoaded', () => checkToken());
+document.addEventListener('DOMContentLoaded', ()=> checkToken());
 
 
 //Registration

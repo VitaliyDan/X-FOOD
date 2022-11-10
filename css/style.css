@@ -551,7 +551,7 @@ ol {
 	background: rgb(242,242,11);
 	background: linear-gradient(180deg, rgba(251, 254, 93, .8) 15%, rgba(183,247,24,1) 44%, rgba(125,251,36,1) 100%);
 	font-size: 16px;
-	font-weight: 300
+	font-weight: 300;
 }
 
 .menu__item img {
@@ -585,10 +585,19 @@ ol {
 	align-items: center;
 	padding: 10px 20px
 }
-
+.buyBtn{
+	max-width: 110px;
+	max-height: 45px;
+	border-radius: 15px;
+}
 .menu__item-price span {
 	font-size: 24px;
 	font-weight: 700
+}
+.buyBtn{
+    background-color: transparent;
+    border-color: transparent;
+
 }
 
 .order {
