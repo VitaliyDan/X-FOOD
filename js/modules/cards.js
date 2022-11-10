@@ -1,6 +1,6 @@
-function cards(){
+function cards() {
     class MenuCard {
-        constructor(id, src, altimg, title, descr, price, parentSelector,) {
+        constructor(id, src, altimg, title, descr, price, parentSelector, ) {
             this.id = id;
             this.src = src;
             this.altimg = altimg;
@@ -10,20 +10,28 @@ function cards(){
             this.parent = document.querySelector(parentSelector);
             this.transfer = 40;
             this.changeToUAH();
+            // this.infoObj = this.infoObj.bind(this);
         }
 
         changeToUAH() {
             this.price = this.price * this.transfer;
         }
 
-        
+        infoObj = {
+            id: this.id,
+            src: this.src
+         }
+
 
         render() {
-            const element = document.createElement('div');
+            let element = document.createElement('div');
+            element.classList.add('addShop');
             let status = '';
             if (localStorage.accessToken === 'undefined' || localStorage.getItem('accessToken') == null) {
-               status += 'hide';
-            }else {status += 'show'};
+                status += 'hide';
+            } else {
+                status += 'show'
+            };
 
 
             element.innerHTML = `
@@ -34,7 +42,7 @@ function cards(){
                     <div class="menu__item-divider"></div>
                     <div class="menu__item-price"> 
                         <div class="menu__item-total"><span>${this.price}</span> UAH/day</div>
-                        <button id= "${this.id}" class="buyBtn ${status}" onClick = "shopMenu(this)"><img style = "max-width: 100px; max-height: 65px;" src="./icons/button.png" alt="buy"></button>
+                        <button id= "${this.id}" class="buyBtn ${status}" onClick="shopMenu(${JSON.stringify(this.infoObj)})"><img style = "max-width: 100px; max-height: 65px;" src="./icons/button.png" alt="buy"></button>
                     </div>
                 </div>
             `;
@@ -59,8 +67,8 @@ function cards(){
                 descr,
                 price
             }) => {
-                new MenuCard(id,src, altimg, title, descr, price, ".menu .container").render();
+                new MenuCard(id, src, altimg, title, descr, price, ".menu .container").render();
             });
         });
 }
- export default cards;
+export default cards;
