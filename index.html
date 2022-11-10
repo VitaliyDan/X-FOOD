@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./icons/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Food</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--bootstrap-->
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="header__left-block">
+            <div class="header__logo">
+                <img src="./icons/logo.png" alt="logotype" style="max-width: 330px;">
+            </div>
+            <nav class="header__links">
+                <a href="#MenuTab" class="header__link">Menu</a>
+                <a href="#Calculator" class="header__link">Calculator</a>
+            </nav>
+        </div>
+        <div class="header__right-block">
+            <button class="shopBtn"><img class="openShop" style="max-width: 45px; display: none;"
+                    src="./icons/cartshop.png" alt="shop"></button>
+            <button class="userBtn openUserForm" id="openFormBtn"><img style="max-width: 50px; margin-top: 8px" src="./icons/user.png"
+                    alt="user"></button>
+            <button class="userBtn logout" id="logout"><img style="max-width: 45px;" src="./icons/logout.png"
+                    alt="user"></button>
+
+            <button data-modal class="btn btn_white">Order</button>
+        </div>
+    </header>
+    <div class="sidepanel">
+        <div class="sidepanel__text"><span>Social</span></div>
+        <div class="sidepanel__divider"></div>
+        <a href="https://instagram.com/sudo._.coder?igshid=YmMyMTA2M2Y=" class="sidepanel__icon">
+            <img src="icons/instagram.svg" alt="instagram">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100013816624430" class="sidepanel__icon">
+            <img src="icons/facebook.svg" alt="facebook">
+        </a>
+    </div>
+
+    <div class="preview">
+        <div class="bgc_blue"></div>
+        <div class="container">
+            <div class="tabcontainer">
+                <div class="tabcontent">
+                    <img src="img/widget/proteinBar.jpeg" alt="FitnesBar">
+                    <div class="tabcontent__descr">
+                        A fitness bar is a food that is designed to increase physical energy. Usually, fitness bars
+                        contain a combination of proteins - fats - carbohydrates, in addition, they are enriched with
+                        vitamins and minerals.
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/widget/Vitamin.png" alt="Vitamins">
+                    <div class="tabcontent__descr">
+                        The role of vitamins and minerals is not only to help achieve higher results. They are also
+                        important for your body to be able to withstand heavy loads.
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/widget/gejner_main.jpeg" alt="Gainers">
+                    <div class="tabcontent__descr">
+                        Gainer is a specialized sports food mixture containing a certain ratio of protein and
+                        carbohydrates.
+                        Depending on the purpose and type of training, gainers are used as a complete sports nutrition
+                        or as a supplement.
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/widget/protein.jpeg" alt="Proteins">
+                    <div class="tabcontent__descr">
+                        Proteins are a key nutritional supplement for every active athlete.
+                        Proteins help in building muscle mass and at the same time provide protection and regeneration
+                        of muscle tissue that wears out during training.
+                    </div>
+                </div>
+                <div class="tabheader">
+                    <h3>Choose a additional nutrition</h3>
+                    <div class="tabheader__items">
+                        <div class="tabheader__item tabheader__item_active">Fitnes Bar</div>
+                        <div class="tabheader__item">Vitamins</div>
+                        <div class="tabheader__item">Gainers</div>
+                        <div class="tabheader__item">Proteins</div>
+                    </div>
+                </div>
+            </div>
+            <div class="preview__life">Live life to the fullest!</div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="offer">
+        <div class="bgc_y"></div>
+        <div class="container">
+            <div class="offer__text">
+                <h2 class="title">What can we offer you?</h2>
+                <div class="offer__descr">
+                    Behind every great human achievement, there is a team.ㅤ ㅤ ㅤ ㅤ ㅤ ㅤ
+                    We are the “X-Food” team. Our mission is to deliver our users the healthy lifestyle just in a few
+                    clicks.
+                    Whenever they are, whoever they are. From the fitness gym to the important business meeting.
+
+                </div>
+                <div style="margin-left: 15px; margin-top: 15px; font-size: 20px; font-weight: 600;"> Enjoy❤️ </div>
+            </div>
+            <div class="offer__action">
+                <button data-modal class="btn btn_dark">Order</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="offer__advantages">
+                <h2>Fast and healthy</h2>
+                <div class="offer__advantages-text">
+                    X-Food is not just about fitness bars. It’s about the way of life. 
+                    It’s about choice to live healthy and bring minimum effort for it. 
+                    Your healthy eating just in a few clicks❤️
+                </div>
+                <h2>Right choice</h2>
+                <div class="offer__advantages-text">
+                    We have developed an online shop with fitness
+                     bars and other healthy snacks, so you can balance benween 
+                     fast and proper nuntition without stricts diets
+                </div>
+            </div>
+            <div class="offer__slider">
+                <div class="offer__slider-counter">
+                    <div class="offer__slider-prev">
+                        <img src="icons/left.svg" alt="prev">
+                    </div>
+                    <span id="current">03</span>
+                    /
+                    <span id="total">04</span>
+                    <div class="offer__slider-next">
+                        <img src="icons/right.svg" alt="next">
+                    </div>
+                </div>
+                <div class="offer__slider-wrapper">
+                    <div class="slider-inner">
+                        <div class="offer__slide">
+                            <img src="img/slider/flakes.png" alt="Flakes">
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/Bar.png" alt="Bar">
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/itamins.jpeg" alt="vitamins">
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/creatin.jpeg" alt="creatine">
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/Protein.jpeg" alt="protein">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div id="Calculator" class="calculating">
+        <div class="container">
+            <h2 class="title">Let's calculate your rate for calories?
+            </h2>
+            <div class="calculating__field">
+                <div class="calculating__subtitle">
+                    Your gender
+                </div>
+                <div class="calculating__choose" id="gender">
+                    <div id="female" class="calculating__choose-item calculating__choose-item_active">Famale</div>
+                    <div id="male" class="calculating__choose-item">Male</div>
+                </div>
+
+                <div class="calculating__subtitle">
+                    Your parameters
+                </div>
+                <div class="calculating__choose calculating__choose_medium">
+                    <input type="text" id="height" placeholder="your height" class="calculating__choose-item">
+                    <input type="text" id="weight" placeholder="your weight" class="calculating__choose-item">
+                    <input type="text" id="age" placeholder="Your age " class="calculating__choose-item">
+                </div>
+
+                <div class="calculating__subtitle">
+                    Choose your activity
+                </div>
+                <div class="calculating__choose calculating__choose_big">
+                    <div data-calc="1.2" id="low" class="calculating__choose-item">low activity </div>
+                    <div data-calc="1.375" id="small" class="calculating__choose-item calculating__choose-item_active">
+                        Small activity</div>
+                    <div data-calc="1.55" id="medium" class="calculating__choose-item">Medium activity</div>
+                    <div data-calc="1.725" id="high" class="calculating__choose-item">High activity</div>
+
+                </div>
+
+                <div class="calculating__divider"></div>
+
+                <div class="calculating__total">
+                    <div class="calculating__subtitle">
+
+                    </div>
+                    <div class="calculating__result">
+                        <span>2700</span> kall
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div id="MenuTab" class="menu">
+        <h2 class="title">Menu for this day</h2>
+
+        <div class="menu__field">
+            <div class="container">
+                <!-- тут меню -->
+            </div>
+        </div>
+    </div>
+
+    <div class="order">
+        <div class="container">
+            <div class="title">Book your trial day now!</div>
+            <form action="#" class="order__form formWare">
+                <input required placeholder="Your name" name="name" type="text" class="order__input" autocomplete="off">
+                <input required placeholder="Your phone" name="phone" type="phone" class="order__input" autocomplete="off">
+                <img src="icons/right.svg" alt="right">
+                <button class="btn btn_dark btn_min callReqest">Call me!</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div id="Promotions" class="promotion">
+        <div class="bgc_y"></div>
+        <div class="container">
+            <div class="promotion__text">
+                <div class="title">Promotion for new clients!</div>
+                <div class="promotion__descr">
+                    We appreciate every client and offer you to become one of them on very favorable terms.
+                    Anyone who orders food delivery for a week will receive a discount of <span>20%!</span>
+                    <br><br>
+                    Promotion ending 20 may on 00:00
+                </div>
+            </div>
+            <div class="promotion__timer">
+                <div class="title title_background" style="margin-left: 150px;text-align: center;">End of promotion:
+                </div>
+                <div class="timer">
+                    <div class="timer__block">
+                        <span id="days">12</span>
+                        days
+                    </div>
+                    <div class="timer__block">
+                        <span id="hours">20</span>
+                        hours
+                    </div>
+                    <div class="timer__block">
+                        <span id="minutes">56</span>
+                        minutes
+                    </div>
+                    <div class="timer__block">
+                        <span id="seconds">20</span>
+                        seconds
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social">
+                <div class="subtitle">My social networks:</div>
+                <a href="https://instagram.com/sudo._.coder?igshid=YmMyMTA2M2Y=" class="link">Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=100013816624430" class="link">Facebook</a>
+            </div>
+            <div class="pepper">
+                <a href="#header" class="pepper">
+                    <img src="icons/veg.svg" alt="pepper">
+                </a>
+
+            </div>
+            <div class="call">
+                <div class="subtitle">My contact</div>
+                <a href="#" class="link">+380508700185</a>
+                <a href="#" class="link">+380500555400</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <form action="#" class="formWare">
+                    <div data-close class="modal__close">&times;</div>
+                    <div class="modal__title">We callback you soon!</div>
+                    <input required placeholder="Name Ware" name="nameWare" type="text" class="modal__input" autocomplete="off">
+                    <input required placeholder="Your phone" name="phone" type="phone" class="modal__input" autocomplete="off">
+                    <button class="btn btn_dark btn_min callReqest">Call me!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="registrModal">
+        <div class="modal__reg">
+            <div class="modal__content">
+                <div class="registr-btns">
+                    <button id="logIn" class="modalBtn">Login</button>
+                    <button id="regestrIn" class="modalBtn">Register</button>
+                </div>
+                <div class="login-form">
+                    <form onsubmit="signIn(event)" action="#">
+                        <div data-close class="modal__close">&times;</div>
+                        <div class="modal_log">Sign in</div>
+                        <input required placeholder="Your email" name="email" type="email" autocomplete="off"
+                            class="modal__input logReqest">
+                        <div class="pass-container">
+                            <input required placeholder="Your password" name="password" type="password"
+                                class="modal__input logReqest psswd" id="logPass">
+                            <i class="far fa-eye login" id="togglePassword"></i>
+                        </div>
+                        <div class="log-reg-btn"><button class="btn btn_dark btn_min logBtn">Login</button></div>
+                         
+                    </form>
+                </div>
+                <div class="reg-form hide">
+                    <form onsubmit="Registration(event)" class="loginForm">
+                        <div data-close class="modal__close">&times;</div>
+                        <div class="maodal_reg">Registration</div>
+                        <div class="displayLog">
+                            <input required placeholder="Your username" name="username" type="text"
+                                class="modal__input reg" autocomplete="off">
+                            <input required placeholder="Your email" name="email" type="email" class="modal__input reg" autocomplete="off">
+                            <div class="pass-container">
+                                <input required placeholder="Create password" name="password" type="password"
+                                    class="modal__input psswd reg" id="pass">
+                                <i class="far fa-eye" id="togglePassword"></i>
+                            </div>
+                            <div class="pass-container">
+                                <input required placeholder="Repeat password" name="password" type="password"
+                                    class="modal__input psswd" id="repPass" onkeyup="valid(event)">
+                                <i class="far fa-eye" id="togglePassword"></i>
+                            </div>
+                        </div>
+
+                        <div class="log-reg-btn btn_valid"><button id="regBtn" class="btn btn_dark btn_min">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/bundle.js"></script>
+    <script src="./js/modules/regCallBack.js"></script>
+    <script src="./js/modules/shopMenu.js"></script>
+</body>
+
+</html>
