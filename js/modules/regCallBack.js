@@ -4,7 +4,6 @@ function openModal(modalSelector) {
     modal.classList.remove('hide');
     document.body.style.overflow = 'hidden';
 }
-
 //validation
 function valid(event){
     const pas = document.getElementById('pass').value,

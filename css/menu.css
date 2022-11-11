@@ -6,6 +6,12 @@
     padding: 0;
     font-family: Roboto, sans-serif
 }
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
 .menuModal{
 	position: fixed;
 	top: 0;
@@ -17,7 +23,8 @@
 	background-color: rgba(0, 0, 0, .5)
 }
 .modal__menu {
-	margin: 120px auto;
+    max-width: 900px;
+	margin: 87px auto;
 	position: relative;
 	overflow-y: auto;
 	border-radius: 4px;
@@ -29,15 +36,15 @@
 }
 
 .cartShopMenu {
-    padding: 40px 0 50px 0;
     background-image: url('../img/menu/backgroundMenu.webp');
-    max-width: 1000px;
-    max-height: 600px;
-    margin: 40px auto;
-	position: relative;
-    border-radius: 15px;
-    margin: auto;
-    overflow-y: scroll;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    border: 1px solid rgba(86, 187, 43, 0.5);
+    border-radius: 20px;
+    max-height: 685px;
+    overflow-y: auto;
 }
 
 .cartInfo {
@@ -60,7 +67,7 @@
 .right-block {
     display: flex;
     justify-content: space-between;
-    min-width: 210px;
+    width: 250px;
     border-radius: 20px;
     background-color: rgb(247, 215, 166);
     border-color: #6fc21b;
@@ -69,15 +76,19 @@
 .left-block {
     display: flex;
     justify-content: space-between;
-    min-width: 350px;
+    min-width: 349px;
+    max-width: 350px;
 
+    align-items: center;
 }
 
+
 .basketTitle{
-    background-color: white;
+    height: 40px;
+    padding-top: 4px;
+    background-color: #6fc21b;
     max-width: 300px;
-    text-align: center;
-    margin: 0px 15em 20px auto;
+    margin: auto auto 25px;
     border-style: solid;
     border-radius: 20px;
 }
@@ -98,7 +109,7 @@
     border-style: solid;
     border-radius: 20px;
 }
-.currNumb{
+#currNumb{
     border-radius: 10px;
     padding: 5px;
     font-size: 23px;
@@ -121,7 +132,7 @@
 }
 .block-total{
     max-width: 350px;
-    margin: 25px 80px auto auto;
+    margin: 25px -13px auto auto;
     display: flex;
 
 }

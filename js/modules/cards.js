@@ -10,7 +10,9 @@ function cards() {
             this.parent = document.querySelector(parentSelector);
             this.transfer = 40;
             this.changeToUAH();
+            this.element = document.createElement('div');
             this.infoObj = {
+                element: this.element,
                 title: this.title,
                 src: this.src,
                 price: this.price,
@@ -30,7 +32,6 @@ function cards() {
 
 
         render() {
-            let element = document.createElement('div');
             let status = '';
             if (localStorage.accessToken === 'undefined' || localStorage.getItem('accessToken') == null) {
                 status += 'hide';
@@ -38,7 +39,7 @@ function cards() {
                 status += 'show'
             };
 
-            element.innerHTML = `
+            this.element.innerHTML = `
                 <div class="menu__item" id="${this.id}">
                     <img src=${this.src} alt=${this.altimg}>
                     <h3 class="menu__item-subtitle">${this.title}</h3>
@@ -50,10 +51,12 @@ function cards() {
                     </div>
                 </div>
             `;
-            element.getElementsByClassName('buyBtn')[0].addEventListener('click', () => {
+            this.element.getElementsByClassName('buyBtn')[0].addEventListener('click', () => {
+                this.element.getElementsByClassName('buyBtn')[0].classList.remove('show');
+                this.element.getElementsByClassName('buyBtn')[0].classList.add('hide');
                 shopMenu(this.infoObj);
             });
-            this.parent.append(element);
+            this.parent.append(this.element);
         }
     }
 
