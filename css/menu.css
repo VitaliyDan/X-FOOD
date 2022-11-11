@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif
+}
+.menuModal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1050;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, .5)
+}
+.modal__menu {
+	margin: 120px auto;
+	position: relative;
+	overflow-y: auto;
+	border-radius: 4px;
+
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+.cartShopMenu {
+    padding: 40px 0 50px 0;
+    background-image: url('../img/menu/backgroundMenu.webp');
+    max-width: 1000px;
+    max-height: 600px;
+    margin: 40px auto;
+	position: relative;
+    border-radius: 15px;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+.cartInfo {
+    background-color: blanchedalmond;
+    position: relative;
+    border-color: #6fc21b;
+    border-style: solid;
+    border-radius: 20px;
+    max-width: 800px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 3px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 80px;
+    padding: 0 30px
+}
+
+.right-block {
+    display: flex;
+    justify-content: space-between;
+    min-width: 210px;
+    border-radius: 20px;
+    background-color: rgb(247, 215, 166);
+    border-color: #6fc21b;
+    border-style: solid;
+}
+.left-block {
+    display: flex;
+    justify-content: space-between;
+    min-width: 350px;
+
+}
+
+.basketTitle{
+    background-color: white;
+    max-width: 300px;
+    text-align: center;
+    margin: 0px 15em 20px auto;
+    border-style: solid;
+    border-radius: 20px;
+}
+.delWare {
+    background-color: transparent;
+    border-color: transparent;
+    margin-top: 2px;
+    margin-right: 8px;
+    font-size: 18px;
+    font-weight: 900;
+}
+.totalCost{
+    background-color: blanchedalmond;
+    width: 150px;
+    height: 40px;
+    padding-top: 8px;
+    text-align: center;
+    border-style: solid;
+    border-radius: 20px;
+}
+.currNumb{
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 23px;
+    width: 55px;
+    align-content: center;
+    height: 35px;
+    border-color: #6fc21b;
+    outline: none;
+    background-color:rgb(247, 215, 166);
+}
+.buy{
+        width: 150px;
+        height: 40px;
+        border-radius: 20px;
+        margin-left: 30px;
+        background-color: blanchedalmond;
+}
+.buy:active{
+    background-color: rgb(247, 215, 166);
+}
+.block-total{
+    max-width: 350px;
+    margin: 25px 80px auto auto;
+    display: flex;
+
+}

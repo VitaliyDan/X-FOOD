@@ -1,62 +1,71 @@
 {
   "menu": [
-    { "id":1,
+    {
+      "id": 1,
       "src": "img/menu/snackbar.jpg",
       "altimg": "Cereal Marshmallow Galaxy",
       "title": "Cereal Marshmallow Galaxy",
       "descr": "365 by Whole Foods Market products give you that dance-down-the-aisles feeling, virtual aisles too! Our huge range of choices with premium ingredients at prices you can get down with makes grocery shopping so much more than tossing the basics in your cart.",
       "price": 14
     },
-    { "id":2,
+    {
+      "id": 2,
       "src": "img/menu/vega-sport.jpg",
       "altimg": "Vega Sport Premium Protein Powder",
       "title": "Vega Sport Premium Protein Powder",
       "descr": "Made for athletes - NSF Certified for Sport, Non-GMO Project Verified, Certified Vegan protein powder and gluten free. Smooth taste and texture, just blend or shake with water or your choice of beverage post workout.",
       "price": 34
     },
-    { "id":3,
+    {
+      "id": 3,
       "src": "img/menu/OptimumNutritionGold.png",
       "altimg": "Optimum Nutrition Gold Standard 100% Whey Protein Powder",
       "title": "Optimum Nutrition Gold Standard 100% Whey Protein Powder with strawberries'",
       "descr": "Over 5 grams of BCAAS help build lean and strong muscles with BCAAs. 3-4 grams carbs, 1-3 grams sugar, and 1-1.5 grams fat, gluten free, no sucralose in Double Rich Chocolate flavor. Notice: Do not use as a sole source of nutrition.",
       "price": 45
     },
-    { "id":4,
+    {
+      "id": 4,
       "src": "img/menu/PremierProteinShake.png",
       "altimg": "Premier Protein Shake",
       "title": "Premier Protein Shake",
       "descr": "Like the taste of a caramel sundae with dripping caramel over vanilla ice cream in this protein shake; Winner of American Masters of Taste Gold Medal for SUPERIOR TASTING ready-to-drink protein beverages.",
       "price": 32
     },
-    { "id":5,
+    {
+      "id": 5,
       "src": "img/menu/QuestTortilla.png",
       "altimg": "Quest Tortilla Style Protein Chips Variety Pack",
       "title": "Quest Tortilla Style Protein Chips Variety Pack",
       "descr": "CRUNCH INTO COMPLETE PROTEINS: Quest Tortilla Style Protein Chips are made with complete, dairy-based proteins to provide your body with 9 essential amino acids",
       "price": 49
     },
-    { "id":6,
+    {
+      "id": 6,
       "src": "img/menu/GOONProteinGranola.png",
       "altimg": "GO ON Protein Granola",
       "title": "GO ON Protein Granola",
       "descr": "GO ON PROTEIN GRANOLA 300 grams is a delicious breakfast enriched with vegetable protein, which is also suitable as a quick snack at any time of the day, especially suitable for athletes or people watching their weight.",
       "price": 3
     },
-    { "id":7,
+    {
+      "id": 7,
       "src": "img/menu/VegaRealFoodSmoothie.png",
       "altimg": "Vega Real Food Smoothie",
       "title": "Vega Real Food Smoothie",
       "descr": "20g of North American-sourced pea protein made with real food ingredients like oats and spinach. Silky smooth, sippable smoothie – no blender needed. Non-GMO Project Verified, Vegan certified, and gluten-free",
       "price": 43
     },
-    { "id":8,
+    {
+      "id": 8,
       "src": "img/menu/PureProteinBars.png",
       "altimg": "Pure Protein Bars",
       "title": "Pure Protein Bars",
       "descr": "Variety pack includes: 10 - Chocolate Peanut Butter, 8 - Chocolate Deluxe, 7 - Chewy Chocolate Chip.",
       "price": 35
     },
-    { "id":9,
+    {
+      "id": 9,
       "src": "img/menu/KelloggsSpecialKProteinBars.png",
       "altimg": "Kellogg's Special K Protein Bars",
       "title": "Kellogg's Special K Protein Bars",

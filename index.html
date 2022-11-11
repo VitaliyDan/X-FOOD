@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X-Food</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/menu.css">
 
     <!--bootstrap-->
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
@@ -27,8 +28,8 @@
         <div class="header__right-block">
             <button class="shopBtn"><img class="openShop" style="max-width: 45px; display: none;"
                     src="./icons/cartshop.png" alt="shop"></button>
-            <button class="userBtn openUserForm" id="openFormBtn"><img style="max-width: 50px; margin-top: 8px" src="./icons/user.png"
-                    alt="user"></button>
+            <button class="userBtn openUserForm" id="openFormBtn"><img style="max-width: 50px; margin-top: 8px"
+                    src="./icons/user.png" alt="user"></button>
             <button class="userBtn logout" id="logout"><img style="max-width: 45px;" src="./icons/logout.png"
                     alt="user"></button>
 
@@ -45,6 +46,36 @@
             <img src="icons/facebook.svg" alt="facebook">
         </a>
     </div>
+
+    <!--ShopMenu-->
+    <div class="menuModal hide">
+        <div class="modal__menu">
+            <div class="cartShopMenu">
+                <div data-close class="modal__close">&times;</div>
+                <h2 class="basketTitle"> Welcom to basked</h2>
+                <!-- render -->
+                <div class="cartInfo">
+                    <div class="left-block">
+                        <img src="./img/menu/GOONProteinGranola.png" alt="buy"
+                            style="max-width: 70px; max-height: 70px;">
+                        <h3 style="margin: 1em;">Kellogg's Special K Protein Bars</h3>
+                    </div>
+                    <input type="number" min="1" max="20" class="currNumb">
+                    <div class="right-block">
+                        <h3 style="margin: 1em;">Price: 1800UAH</h3>
+                        <button class="delWare"><img src="./icons/trash-bin.png" alt="trash"
+                                style="max-width: 30px;"></button>
+                    </div>
+                </div>
+                <div class="block-total">
+                    <h3 class="totalCost">Total: 1500UAH</h3>
+                    <button class="buy">BUY</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--end-->
 
     <div class="preview">
         <div class="bgc_blue"></div>
@@ -120,15 +151,15 @@
             <div class="offer__advantages">
                 <h2>Fast and healthy</h2>
                 <div class="offer__advantages-text">
-                    X-Food is not just about fitness bars. It’s about the way of life. 
-                    It’s about choice to live healthy and bring minimum effort for it. 
+                    X-Food is not just about fitness bars. It’s about the way of life.
+                    It’s about choice to live healthy and bring minimum effort for it.
                     Your healthy eating just in a few clicks❤️
                 </div>
                 <h2>Right choice</h2>
                 <div class="offer__advantages-text">
                     We have developed an online shop with fitness
-                     bars and other healthy snacks, so you can balance benween 
-                     fast and proper nuntition without stricts diets
+                    bars and other healthy snacks, so you can balance benween
+                    fast and proper nuntition without stricts diets
                 </div>
             </div>
             <div class="offer__slider">
@@ -233,7 +264,8 @@
             <div class="title">Book your trial day now!</div>
             <form action="#" class="order__form formWare">
                 <input required placeholder="Your name" name="name" type="text" class="order__input" autocomplete="off">
-                <input required placeholder="Your phone" name="phone" type="phone" class="order__input" autocomplete="off">
+                <input required placeholder="Your phone" name="phone" type="phone" class="order__input"
+                    autocomplete="off">
                 <img src="icons/right.svg" alt="right">
                 <button class="btn btn_dark btn_min callReqest">Call me!</button>
             </form>
@@ -306,8 +338,10 @@
                 <form action="#" class="formWare">
                     <div data-close class="modal__close">&times;</div>
                     <div class="modal__title">We callback you soon!</div>
-                    <input required placeholder="Name Ware" name="nameWare" type="text" class="modal__input" autocomplete="off">
-                    <input required placeholder="Your phone" name="phone" type="phone" class="modal__input" autocomplete="off">
+                    <input required placeholder="Name Ware" name="nameWare" type="text" class="modal__input"
+                        autocomplete="off">
+                    <input required placeholder="Your phone" name="phone" type="phone" class="modal__input"
+                        autocomplete="off">
                     <button class="btn btn_dark btn_min callReqest">Call me!</button>
                 </form>
             </div>
@@ -333,7 +367,7 @@
                             <i class="far fa-eye login" id="togglePassword"></i>
                         </div>
                         <div class="log-reg-btn"><button class="btn btn_dark btn_min logBtn">Login</button></div>
-                         
+
                     </form>
                 </div>
                 <div class="reg-form hide">
@@ -343,7 +377,8 @@
                         <div class="displayLog">
                             <input required placeholder="Your username" name="username" type="text"
                                 class="modal__input reg" autocomplete="off">
-                            <input required placeholder="Your email" name="email" type="email" class="modal__input reg" autocomplete="off">
+                            <input required placeholder="Your email" name="email" type="email" class="modal__input reg"
+                                autocomplete="off">
                             <div class="pass-container">
                                 <input required placeholder="Create password" name="password" type="password"
                                     class="modal__input psswd reg" id="pass">
@@ -356,7 +391,8 @@
                             </div>
                         </div>
 
-                        <div class="log-reg-btn btn_valid"><button id="regBtn" class="btn btn_dark btn_min">Register</button>
+                        <div class="log-reg-btn btn_valid"><button id="regBtn"
+                                class="btn btn_dark btn_min">Register</button>
                         </div>
                     </form>
                 </div>

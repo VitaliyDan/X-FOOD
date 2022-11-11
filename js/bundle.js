@@ -25,7 +25,7 @@ function cards() {
             this.transfer = 40;
             this.changeToUAH();
             this.infoObj = {
-                id: this.id,
+                title: this.title,
                 src: this.src,
                 price: this.price,
             };
@@ -45,7 +45,6 @@ function cards() {
 
         render() {
             let element = document.createElement('div');
-            element.classList.add('addShop');
             let status = '';
             if (localStorage.accessToken === 'undefined' || localStorage.getItem('accessToken') == null) {
                 status += 'hide';
@@ -478,7 +477,7 @@ function ChangePasswordType (element) {
 /***/ (() => {
 
 function shopMenu(obj){
-    console.log('ss: ',obj);
+    
 }
         
 
