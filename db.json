@@ -2,7 +2,7 @@
   "menu": [
     {
       "id": 1,
-      "src": "img/menu/snackbar.jpg",
+      "src": "img/menu/snackbar.png",
       "altimg": "Cereal Marshmallow Galaxy",
       "title": "Cereal Marshmallow Galaxy",
       "descr": "365 by Whole Foods Market products give you that dance-down-the-aisles feeling, virtual aisles too! Our huge range of choices with premium ingredients at prices you can get down with makes grocery shopping so much more than tossing the basics in your cart.",
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "src": "img/menu/vega-sport.jpg",
+      "src": "img/menu/vega-sport.png",
       "altimg": "Vega Sport Premium Protein",
       "title": "Vega Sport Premium Protein",
       "descr": "Made for athletes - NSF Certified for Sport, Non-GMO Project Verified, Certified Vegan protein powder and gluten free. Smooth taste and texture, just blend or shake with water or your choice of beverage post workout.",
