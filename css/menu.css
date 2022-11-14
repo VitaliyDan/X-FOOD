@@ -36,7 +36,7 @@
 }
 
 .cartShopMenu {
-    background-image: url('../img/menu/backgroundMenu.webp');
+    background-image: url('../img/menu/backgroundMenu.png');
     text-align: center;
     position: relative;
     width: 100%;
@@ -48,7 +48,8 @@
 }
 
 .cartInfo {
-    background-color: blanchedalmond;
+    background: rgb(247,215,165);
+    background: linear-gradient(90deg, rgba(247,215,165,1) 28%, rgba(228,221,145,1) 35%, rgba(125,251,36,1) 100%);
     position: relative;
     border-color: #6fc21b;
     border-style: solid;
@@ -87,7 +88,7 @@
     height: 40px;
     padding-top: 4px;
     background-color: #6fc21b;
-    max-width: 300px;
+    max-width: 500px;
     margin: auto auto 25px;
     border-style: solid;
     border-radius: 20px;
@@ -102,12 +103,13 @@
 }
 .totalCost{
     background-color: blanchedalmond;
-    width: 150px;
+    width: max-content;
     height: 40px;
     padding-top: 8px;
     text-align: center;
     border-style: solid;
     border-radius: 20px;
+    border-color: #21eb24;
 }
 #currNumb{
     border-radius: 10px;
@@ -126,6 +128,7 @@
         border-radius: 20px;
         margin-left: 30px;
         background-color: blanchedalmond;
+        border-color: #21eb24;
 }
 .buy:active{
     background-color: rgb(247, 215, 166);

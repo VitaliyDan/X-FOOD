@@ -4,26 +4,8 @@ function openModal(modalSelector) {
     modal.classList.remove('hide');
     document.body.style.overflow = 'hidden';
 }
-//validation
-function valid(event){
-    const pas = document.getElementById('pass').value,
-         cpas = document.getElementById('repPass').value;
-         passwd = document.getElementById('repPass'),
-         regBtn = document.querySelector('.btn_valid');
-    for(i=0;i < cpas.length; i++)
-    {
-     if(pas[i] != cpas[i] && event.keyCode != 8)
-     {
-        passwd.classList.add('invalid');
-        regBtn.classList.add('hide');
-       break;
-     }else{
-        passwd.classList.remove('invalid');
-        regBtn.classList.remove('hide');
-     }
-    }
-    }
-function showResponseModal(message) {
+
+ function showResponseModal(message) {
     const prevModal = document.querySelector('.modal__dialog');
     prevModal.classList.add('hide');
     openModal('.modal', );
@@ -43,8 +25,28 @@ function showResponseModal(message) {
         form.classList.remove('show');
         document.body.style.overflow = '';
         location.reload();
-    }, 1300);
+    }, 1000);
 }
+//validation
+function valid(event){
+    const pas = document.getElementById('pass').value,
+         cpas = document.getElementById('repPass').value;
+         passwd = document.getElementById('repPass'),
+         regBtn = document.querySelector('.btn_valid');
+    for(i=0;i < cpas.length; i++)
+    {
+     if(pas[i] != cpas[i] && event.keyCode != 8)
+     {
+        passwd.classList.add('invalid');
+        regBtn.classList.add('hide');
+       break;
+     }else{
+        passwd.classList.remove('invalid');
+        regBtn.classList.remove('hide');
+     }
+    }
+    }
+
 const openShop = document.querySelector('.openShop'),
     addUser = document.querySelector('.openUserForm'),
     logout = document.querySelector('.logout'),
@@ -59,7 +61,8 @@ function checkToken() {
         openShop.style.display = "block";
         addUser.classList = "hide";
         logout.classList.remove('hide');
-        logout.classList.add('show');       
+        logout.classList.add('show');     
+        document.querySelector('.basketTitle').textContent = `Welcome ${JSON.parse(localStorage.user).username}! your ware`
     }
 }
 
@@ -87,13 +90,13 @@ async function signIn(event) {
             user
         } = responseData;
     localStorage.accessToken = accessToken;
-    localStorage.user = user;
+    localStorage.setItem('user', JSON.stringify(user));
     if (typeof responseData === 'string') {
         modalClose.classList.remove("show");
         showResponseModal(responseData);
     } else {
         modalClose.classList.remove("show");
-        showResponseModal("Welcome to X-FOOD ❤️");
+        showResponseModal(`Welcome ${JSON.parse(localStorage.user).username} to X-FOOD ❤️`);
     }
 
 
@@ -122,12 +125,14 @@ async function Registration(event) {
         .then(res => res.json())
         .then(data => {
             localStorage.accessToken = data.accessToken;
+            localStorage.setItem('user',JSON.stringify(data.user));
             if(localStorage.accessToken === 'undefined' || localStorage.getItem('accessToken') == null){
                 showResponseModal("This Email allready. Choose another!")
             }else{
-                showResponseModal("Your account is registered!")
+                showResponseModal("Your account is registered!");
             }
         })
     modalClose.classList.remove('show');
 
 }
+

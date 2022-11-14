@@ -55,6 +55,7 @@ function cards() {
                 this.element.getElementsByClassName('buyBtn')[0].classList.remove('show');
                 this.element.getElementsByClassName('buyBtn')[0].classList.add('hide');
                 shopMenu(this.infoObj);
+                allWares(this.infoObj);
             });
             this.parent.append(this.element);
         }

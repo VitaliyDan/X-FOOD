@@ -1,5 +1,13 @@
+
 const modal = document.querySelector('.menuModal'),
-      totalContent = document.querySelector('.totalCost');
+      totalContent = document.querySelector('.totalCost'),
+      buy = document.querySelector('.buy');
+let orders = {
+    'email': '',
+    'nameWare':[],
+    'value': 'UAH',
+    'totalCost' : 0
+};
 function openModal(modalSelector) {
     const modal = document.querySelector(modalSelector);
     modal.classList.add('show');
@@ -7,13 +15,11 @@ function openModal(modalSelector) {
     document.body.style.overflow = 'hidden';
 }
 
-
 //totalCalc
 let delCost = 0;
-let totalCost = 0;
 function totalValue(input,price){
-    totalCost += input * price;
-    totalContent.textContent = `Total: ${totalCost} UAH`;
+   orders.totalCost += input * price;
+    totalContent.textContent = `Total: ${orders.totalCost} UAH`;
 }
 
 //closeCartShop
@@ -66,18 +72,68 @@ function shopMenu(obj){
             element.getElementsByClassName('delWare')[0].addEventListener('click', () => {
                 delCost += this.price * element.children.item(1).value;
                 element.remove();
-                totalCost -= delCost;
-                totalContent.textContent = `Total: ${totalCost} UAH`;
+                orders.totalCost -= delCost;
+                totalContent.textContent = `Total: ${orders.totalCost} UAH`;
                 this.eBtn.getElementsByClassName('buyBtn')[0].classList.remove('hide');
                 this.eBtn.getElementsByClassName('buyBtn')[0].classList.add('show');
                 setTimeout(delCost-=delCost,100);
-
             });
 
         }
 
+
 }
     new RenderItem(obj.element, obj.src, obj.title, obj.price, ".menuModal .cart-items").render();
+}
+//reqest
+function allWares(obj){
+ orders.email = JSON.parse(localStorage.user).email;
+ orders.nameWare += obj.title + '; ';
+} 
 
+function showResponseModal(message) {
+    const prevModal = document.querySelector('.modal__dialog');
+    prevModal.classList.add('hide');
+    openModal('.modal', );
+    const createModal = document.createElement('div');
+    createModal.classList.add('modal__dialog');
+    createModal.innerHTML = `
+                <div class="modal__content">
+                    <div class="modal__close" data-close>×</div>
+                    <div class="modal__title">${message}</div>
+                </div>
+            `;
+    const form = document.querySelector('.modal')
+    form.append(createModal);
+    setTimeout(() => {
+        createModal.remove();
+        form.classList.add('hide');
+        form.classList.remove('show');
+        document.body.style.overflow = '';
+        location.reload();
+    }, 1000);
 }
 
+async function reqestWare(event) {
+    event.preventDefault();
+    if(typeof orders.nameWare === 'string'){
+    fetch('http://localhost:3000/userOrder', {
+            method: "POST",
+            body: JSON.stringify(orders),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            modal.classList.remove('show');
+            modal.classList.add('hide');
+            showResponseModal('Sucsessfuly buyed')
+            console.log(data);
+        })
+    }else{
+        modal.classList.remove('show');
+        modal.classList.add('hide');
+        showResponseModal('Choose some product');
+    }
+}

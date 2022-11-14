@@ -73,13 +73,7 @@
       "price": 43
     }
   ],
-  "users": [
-    {
-      "email": "vitaliy@vitaliy",
-      "password": "$2a$10$aHOYI2qHLuNzrERn8gUcx.MEwBtwl2BHXPzfHVd6ZggxeZHeaUm6a",
-      "username": "vitaliy",
-      "id": 1
-    }
-  ],
-  "order": []
+  "users": [],
+  "order": [],
+  "userOrder": []
 }
